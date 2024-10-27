@@ -1,11 +1,11 @@
-import {HStack, Link} from "@chakra-ui/react";
+import {HStack, Image, Link} from "@chakra-ui/react";
 import {navbarLinksStyle} from "../style/ts/Navbar.style.ts";
 
 const Navbar = () => {
     return (
         <>
             <HStack
-                width={"500px"}
+                width={"600px"}
                 height={"50px"}
                 position={"absolute"}
                 top={"40px"}
@@ -25,6 +25,13 @@ const Navbar = () => {
                 justifyContent={"center"}
                 zIndex={"3"}
             >
+                <Link sx={navbarLinksStyle}>
+                    <Image
+                        src={"/logo/logo_t.png"}
+                        width={"50px"}
+                        height={"50px"}
+                    />
+                </Link>
                 <Link sx={navbarLinksStyle}>
                     Öffnungszeiten
                 </Link>

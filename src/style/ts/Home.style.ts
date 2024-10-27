@@ -1,5 +1,6 @@
 export const imageBoxStyle = (imageUrl: string, isTransitioning: boolean, active: boolean) => ({
-    backgroundImage: active ? `linear-gradient(0deg, #000000 0%, rgba(20, 20, 20, 0.1) 90%), url(${imageUrl})` : "none",
+    backgroundImage: active ? `linear-gradient(0deg, #000000 0%, rgba(20, 20, 20, 0.1) 50%), url(${imageUrl})` : "none",
+    filter: "brightness(0.8)",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -11,3 +12,16 @@ export const imageBoxStyle = (imageUrl: string, isTransitioning: boolean, active
     transition: "opacity 1s ease-in-out 0.2s",
     zIndex: isTransitioning ? 2 : 1,
 });
+
+export const socialMediaIconStyle = {
+    width: "32px",
+    height: "32px",
+    zIndex: 3,
+};
+
+export const socialMediaLinkStyle = {
+    _hover: {
+        transform: "scale(1.2)",
+        transition: "transform 0.3s",
+    },
+};

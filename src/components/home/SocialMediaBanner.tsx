@@ -5,6 +5,7 @@ import {GoMegaphone} from "react-icons/go";
 import SocialMediaLinks from "./SocialMediaLinks.tsx";
 import {useEffect, useRef} from "react";
 import {AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai";
+import ImageDot from "./ImageDot.tsx";
 
 const SocialMediaBanner = ({
                                currentImageIndex,
@@ -69,31 +70,12 @@ const SocialMediaBanner = ({
                             Center
                         </Text>
                     </Box>
-                    <VStack
-                        spacing="15px"
-                        align="center"
-                        display={is880px ? "none" : "flex"}
-                    >
-                        {imageData.map((_, index) => (
-                            <Button
-                                key={index}
-                                onClick={() => handleDotClick(index)}
-                                variant={"ghost"}
-                                _hover={{bg: "none", transform: "scale(1.2)"}}
-                                width={"fit-content"}
-                                height={"fit-content"}
-                                padding="10px"
-                            >
-                                <Image
-                                    src={index === currentImageIndex
-                                        ? "/home/dot_clicked.svg"
-                                        : "/home/dot_unclicked.svg"
-                                    }
-                                    width="10px"
-                                    height="10px"
-                                />
-                            </Button>
-                        ))}
+                    <VStack spacing="15px" align="center" display={is880px ? "none" : "flex"}>
+                        <ImageDot
+                            currentImageIndex={currentImageIndex}
+                            handleDotClick={handleDotClick}
+                            imageData={imageData}
+                        />
                     </VStack>
                 </Flex>
                 <HStack zIndex="5" position="absolute" top="110%" left="50%" transform="translateX(-50%)">
@@ -153,16 +135,18 @@ const SocialMediaBanner = ({
                         ))}
                     </Box>
                     {is880px && (
-                        <Button
-                            onClick={scrollRight}
-                            position="absolute"
-                            right="-5vw"
-                            zIndex="10"
-                            variant="ghost"
-                            _hover={{bg: "none"}}
-                        >
-                            <AiOutlineArrowRight size="30px" color="#32BCF1"/>
-                        </Button>
+                        <>
+                            <Button
+                                onClick={scrollRight}
+                                position="absolute"
+                                right="-5vw"
+                                zIndex="10"
+                                variant="ghost"
+                                _hover={{bg: "none"}}
+                            >
+                                <AiOutlineArrowRight size="30px" color="#32BCF1"/>
+                            </Button>
+                        </>
                     )}
                 </HStack>
             </Box>

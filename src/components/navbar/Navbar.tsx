@@ -50,7 +50,7 @@ const Navbar = () => {
                             display="flex"
                             alignItems="center"
                             justifyContent="center"
-                            transition="all 1.5s ease"
+                            transition="all 1.1s ease"
                             position="fixed"
                             top="50%"
                             right={isOpen ? "50%" : "20px"}

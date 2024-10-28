@@ -1,9 +1,6 @@
 import {Image, Link} from "@chakra-ui/react";
 import {navbarLinksStyle} from "../../style/ts/Navbar.style.ts";
-
-interface INavbarLinks {
-    onClick?: () => void;
-}
+import {INavbarLinks} from "../../interfaces/navbar.interface.ts";
 
 const NavbarLinks = ({
                          onClick

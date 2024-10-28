@@ -41,8 +41,7 @@ const SocialMediaBanner = ({
                 height="fit-content"
                 position="absolute"
                 zIndex="1000"
-                top={"50%"}
-                transform={"translateY(-70%)"}
+                top={"190px"}
             >
                 <Flex
                     align="center"

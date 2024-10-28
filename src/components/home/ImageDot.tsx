@@ -1,10 +1,5 @@
 import {Button, Image} from "@chakra-ui/react";
-
-interface IImageDot {
-    currentImageIndex: number;
-    handleDotClick: (index: number) => void;
-    imageData: { id: number, path: string }[];
-}
+import {IImageDot} from "../../interfaces/home.interface.ts";
 
 const ImageDot = ({
                       currentImageIndex,

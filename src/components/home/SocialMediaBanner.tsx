@@ -1,14 +1,37 @@
-import {Box, Button, Flex, HStack, Image, Link, Text, VStack} from "@chakra-ui/react";
-import {socialMediaIconStyle, socialMediaLinkStyle} from "../../style/ts/Home.style.ts";
+import {Box, Button, Flex, HStack, Image, Text, useMediaQuery, VStack} from "@chakra-ui/react";
 import {ISocialMediaBanner} from "../../interfaces/home.interface.ts";
 import buttonData from "../../../public/assets/actionButtonsHome.json";
 import {GoMegaphone} from "react-icons/go";
+import SocialMediaLinks from "./SocialMediaLinks.tsx";
+import {useEffect, useRef} from "react";
+import {AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai";
 
 const SocialMediaBanner = ({
                                currentImageIndex,
                                handleDotClick,
                                imageData
                            }: ISocialMediaBanner) => {
+    const [is880px] = useMediaQuery("(max-width: 880px)");
+    const scrollRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollLeft = scrollRef.current.scrollWidth / 2 - 112;
+        }
+    }, []);
+
+    const scrollLeft = () => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollLeft -= 224;
+        }
+    };
+
+    const scrollRight = () => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollLeft += 224;
+        }
+    };
+
     return (
         <>
             <Box
@@ -19,24 +42,17 @@ const SocialMediaBanner = ({
                 top={"50%"}
                 transform={"translateY(-70%)"}
             >
-                <Flex align="center" justify="space-between" padding="40px">
-                    <VStack spacing="100px" align="start">
-                        <Link
-                            href="https://www.instagram.com/seelandcenterlyss/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            sx={socialMediaLinkStyle}
-                        >
-                            <Image src="/home/instagram.svg" sx={socialMediaIconStyle}/>
-                        </Link>
-                        <Link
-                            href="https://www.facebook.com/seelandcenterlyss"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            sx={socialMediaLinkStyle}
-                        >
-                            <Image src="/home/facebook.svg" sx={socialMediaIconStyle}/>
-                        </Link>
+                <Flex
+                    align="center"
+                    justify={is880px ? "center" : "space-between"}
+                    padding="40px"
+                >
+                    <VStack
+                        spacing="100px"
+                        align="start"
+                        display={is880px ? "none" : "flex"}
+                    >
+                        <SocialMediaLinks/>
                     </VStack>
                     <Box
                         lineHeight={1}
@@ -45,12 +61,18 @@ const SocialMediaBanner = ({
                         textTransform="uppercase"
                         bgGradient="linear(0deg, rgba(4, 42, 158, 0.6) 4%, #FFFFFF 30%)"
                         bgClip="text"
-                        fontSize="9.391rem"
+                        fontSize={is880px ? "5rem" : "9.391rem"}
                     >
                         <Text>Seeland</Text>
-                        <Text textAlign="right">Center</Text>
+                        <Text textAlign={is880px ? "center" : "right"}>
+                            Center
+                        </Text>
                     </Box>
-                    <VStack spacing="15px" align="center">
+                    <VStack
+                        spacing="15px"
+                        align="center"
+                        display={is880px ? "none" : "flex"}
+                    >
                         {imageData.map((_, index) => (
                             <Button
                                 key={index}
@@ -73,52 +95,74 @@ const SocialMediaBanner = ({
                         ))}
                     </VStack>
                 </Flex>
-                <HStack
-                    zIndex="5"
-                    position="absolute"
-                    top="120%"
-                    left="50%"
-                    transform="translateX(-50%)"
-                    gap="20px"
-                >
-                    {buttonData.map((button) => (
-                        <Box
-                            key={button.id}
-                            width="224px"
-                            height="77px"
-                            backgroundColor="rgba(50, 188, 241, 0.19)"
-                            borderRadius="6px"
-                            backdropFilter="blur(3px)"
-                            boxShadow="0px 0px 18.6px 4px rgba(0, 0, 0, 0.25)"
-                            color="#FFFFFF"
-                            padding="10px"
-                            className={"scale-on-hover"}
+                <HStack zIndex="5" position="absolute" top="110%" left="50%" transform="translateX(-50%)">
+                    {is880px && (
+                        <Button onClick={scrollLeft} position="absolute" left="-70px" zIndex="10" variant="ghost"
+                                _hover={{bg: "none"}}>
+                            <AiOutlineArrowLeft size="30px" color="#32BCF1"/>
+                        </Button>
+                    )}
+                    <Box
+                        ref={scrollRef}
+                        display="flex"
+                        overflowX="auto"
+                        whiteSpace="nowrap"
+                        maxWidth={is880px ? "300px" : "100%"}
+                        css={{scrollSnapType: "x mandatory", scrollBehavior: "smooth"}}
+                        padding="30px"
+                        gap={is880px ? "" : "30px"}
+                        overflow="hidden"
+                    >
+                        {buttonData.map((button) => (
+                            <Box
+                                key={button.id}
+                                width="224px"
+                                minWidth="224px"
+                                height="77px"
+                                backgroundColor="rgba(50, 188, 241, 0.19)"
+                                borderRadius="6px"
+                                backdropFilter="blur(3px)"
+                                boxShadow="0px 0px 18.6px 4px rgba(0, 0, 0, 0.25)"
+                                color="#FFFFFF"
+                                padding="10px"
+                                className="scale-on-hover"
+                                css={{scrollSnapAlign: "center"}}
+                                ml={is880px ? "40px" : ""}
+                                mr={is880px ? "40px" : ""}
+                            >
+                                <HStack spacing="10px" align="center" justify="center" letterSpacing="0.24em">
+                                    <GoMegaphone size="30px" color="#32BCF1"/>
+                                    <Text textTransform="uppercase" fontSize="1.125rem">
+                                        {button.name}
+                                    </Text>
+                                </HStack>
+                                <HStack
+                                    fontWeight="light"
+                                    letterSpacing="0.1em"
+                                    fontSize="0.875rem"
+                                    align="center"
+                                    justify="right"
+                                    spacing="25px"
+                                    mt="5px"
+                                >
+                                    <Text>Anschauen</Text>
+                                    <Image src="/home/arrow_right.svg" width="44.87px" height="14px"/>
+                                </HStack>
+                            </Box>
+                        ))}
+                    </Box>
+                    {is880px && (
+                        <Button
+                            onClick={scrollRight}
+                            position="absolute"
+                            right="-70px"
+                            zIndex="10"
+                            variant="ghost"
+                            _hover={{bg: "none"}}
                         >
-                            <HStack
-                                spacing="10px"
-                                align="center"
-                                justify="center"
-                                letterSpacing="0.24em"
-                            >
-                                <GoMegaphone size="30px" color="#32BCF1"/>
-                                <Text textTransform="uppercase" fontSize="1.125rem">
-                                    {button.name}
-                                </Text>
-                            </HStack>
-                            <HStack
-                                fontWeight="light"
-                                letterSpacing="0.1em"
-                                fontSize="0.875rem"
-                                align="center"
-                                justify="right"
-                                spacing="25px"
-                                mt="5px"
-                            >
-                                <Text>Anschauen</Text>
-                                <Image src="/home/arrow_right.svg" width="44.87px" height="14px"/>
-                            </HStack>
-                        </Box>
-                    ))}
+                            <AiOutlineArrowRight size="30px" color="#32BCF1"/>
+                        </Button>
+                    )}
                 </HStack>
             </Box>
         </>

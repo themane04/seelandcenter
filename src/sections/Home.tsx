@@ -1,6 +1,6 @@
 import {Box, HStack, useMediaQuery, VStack} from "@chakra-ui/react";
 import {useEffect, useState} from "react";
-import imageData from "../assets/images.json";
+import imageData from "../assets/home/images.json";
 import {imageBoxStyle} from "../style/ts/Home.style.ts";
 import SocialMediaBanner from "../components/home/SocialMediaBanner.tsx";
 import ImageDot from "../components/home/ImageDot.tsx";

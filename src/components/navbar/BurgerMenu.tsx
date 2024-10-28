@@ -1,6 +1,7 @@
-import {VStack, Box} from "@chakra-ui/react";
+import {VStack, Box, HStack} from "@chakra-ui/react";
 import NavbarLinks from "./NavbarLinks.tsx";
 import {IBurgerMenu} from "../../interfaces/navbar.interface.ts";
+import SocialMediaLinks from "../home/SocialMediaLinks.tsx";
 
 const BurgerMenu = ({isOpen, onClose}: IBurgerMenu) => {
     return (
@@ -24,6 +25,15 @@ const BurgerMenu = ({isOpen, onClose}: IBurgerMenu) => {
         >
             <VStack spacing={6} fontSize={["1.5rem", "2rem", "2.5rem", "3rem"]} fontWeight="semibold">
                 <NavbarLinks onClick={onClose}/>
+                <HStack
+                    spacing={6}
+                    fontSize={["1.5rem", "2rem", "2.5rem", "3rem"]}
+                    fontWeight="semibold"
+                    color="#FFFFFF"
+                    mt={6}
+                >
+                    <SocialMediaLinks/>
+                </HStack>
             </VStack>
         </Box>
     );

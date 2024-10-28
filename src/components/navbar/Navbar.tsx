@@ -11,7 +11,9 @@ const Navbar = () => {
     const toggleMenu = () => setIsOpen(!isOpen);
     return (
         <>
-            {is880px && <BurgerMenu isOpen={isOpen} onClose={() => setIsOpen(false)}/>}
+            {is880px &&
+                <BurgerMenu isOpen={isOpen} onClose={() => setIsOpen(false)}/>
+            }
             <HStack
                 maxWidth={isOpen ? "100vw" : is880px ? "70px" : "600px"}
                 width="100%"

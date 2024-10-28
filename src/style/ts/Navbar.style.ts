@@ -1,4 +1,5 @@
 export const navbarLinksStyle = {
+    color: "#FFFFFF",
     _hover: {
         textDecoration: "none",
         transform: "scale(1.1)",

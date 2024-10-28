@@ -1,5 +1,5 @@
 import Home from "./sections/Home.tsx";
-import Navbar from "./components/Navbar.tsx";
+import Navbar from "./components/navbar/Navbar.tsx";
 import "./style/css/global.css";
 import "./style/css/Animations.css";
 

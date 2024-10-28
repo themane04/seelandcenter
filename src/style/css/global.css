@@ -2,8 +2,18 @@
 
 html, body {
     background-color: #1E1E1E !important;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
     display: none;
+}
+
+.ms-overflow-style {
+    overflow: hidden;
+}
+
+.scrollbar-width {
+    scrollbar-width: none;
 }

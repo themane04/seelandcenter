@@ -12,18 +12,17 @@ const Business = () => {
                 fontWeight={"bold"}
                 lineHeight={"200%"}
                 textAlign={"left"}
-                padding={"0 500px 200px 0"}
-                marginTop={"200px"}
+                padding="0 20px 300px 0"
                 position="relative"
             >
                 <Box
                     backgroundImage={
-                        "linear-gradient(90deg, rgba(30, 30, 30, 1) 40%, rgba(20, 20, 20, 0.1) 100%)," +
+                        "linear-gradient(90deg, rgba(30, 30, 30, 1) 30%, rgba(20, 20, 20, 0.1) 100%)," +
                         "url(/mall/seeland_outside.jpg)"
                     }
                     backgroundSize="cover"
-                    filter="blur(27.8px)"
-                    opacity={0.53}
+                    filter="blur(5px)"
+                    opacity={0.9}
                     width="100vw"
                     height="520px"
                     position="absolute"
@@ -32,10 +31,8 @@ const Business = () => {
                     left="0"
                     transform="translateY(-50%)"
                 />
-                <Box zIndex={1} position="relative">
-                    <Text textTransform={"uppercase"}>Geschäfte</Text>
-                    <BusinessCard/>
-                </Box>
+                <Text textTransform={"uppercase"} mt={"100px"}>Geschäfte</Text>
+                <BusinessCard/>
             </VStack>
         </>
     );

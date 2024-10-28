@@ -2,51 +2,51 @@
   {
     "id": 0,
     "name": "Denner",
-    "image_path": "/business/denner.jpg"
+    "image_path": "/business/denner.png"
   },
   {
     "id": 1,
     "name": "Interdiscount",
-    "image_path": "/business/inter.jpg"
+    "image_path": "/business/inter.png"
   },
   {
     "id": 2,
     "name": "JYSK",
-    "image_path": "/business/jysk.jpg"
+    "image_path": "/business/jysk.png"
   },
   {
     "id": 3,
     "name": "Kambly",
-    "image_path": "/business/kambly.jpg"
+    "image_path": "/business/kambly.png"
   },
   {
     "id": 4,
     "name": "Kambly Café",
-    "image_path": "/business/kambly_cafe.jpg"
+    "image_path": "/business/kambly_cafe.png"
   },
   {
     "id": 5,
     "name": "Fight Sports",
-    "image_path": "/business/fight_sports.jpg"
+    "image_path": "/business/fight_sports.png"
   },
   {
     "id": 6,
     "name": "QUALIPET",
-    "image_path": "/business/qualipet.jpg"
+    "image_path": "/business/qualipet_new.png"
   },
   {
     "id": 7,
     "name": "Secret Dance",
-    "image_path": "/business/secret_dance.jpg"
+    "image_path": "/business/secret_dance.png"
   },
   {
     "id": 8,
     "name": "Star Hair",
-    "image_path": "/business/star_hair.jpg"
+    "image_path": "/business/star_hair.png"
   },
   {
     "id": 9,
     "name": "Zebra",
-    "image_path": "/business/zebra.jpg"
+    "image_path": "/business/zebra_new.png"
   }
 ]

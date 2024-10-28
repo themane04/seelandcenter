@@ -108,7 +108,7 @@ const SocialMediaBanner = ({
                                 color="#FFFFFF"
                                 padding="10px"
                                 className="scale-on-hover"
-                                css={{scrollSnapAlign: "center"}}
+                                scrollSnapAlign="center"
                                 ml={is880px ? "40px" : ""}
                                 mr={is880px ? "40px" : ""}
                             >

@@ -1,6 +1,6 @@
 import {Box, Button, Flex, HStack, Image, Text, useMediaQuery, VStack} from "@chakra-ui/react";
 import {ISocialMediaBanner} from "../../interfaces/home.interface.ts";
-import buttonData from "../../../public/assets/actionButtonsHome.json";
+import buttonData from "../../assets/actionButtonsHome.json";
 import {GoMegaphone} from "react-icons/go";
 import SocialMediaLinks from "./SocialMediaLinks.tsx";
 import {useEffect, useRef} from "react";

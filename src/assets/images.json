@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "path": "/mall/inside_denner.png"
+  },
+  {
+    "id": 1,
+    "path": "/mall/inside_inter.png"
+  },
+  {
+    "id": 2,
+    "path": "/mall/inside.png"
+  },
+  {
+    "id": 3,
+    "path": "/mall/entrance.png"
+  },
+  {
+    "id": 4,
+    "path": "/mall/outside.png"
+  }
+]

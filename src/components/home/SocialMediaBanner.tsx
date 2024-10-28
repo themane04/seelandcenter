@@ -12,6 +12,7 @@ const SocialMediaBanner = ({
                                imageData
                            }: ISocialMediaBanner) => {
     const [is880px] = useMediaQuery("(max-width: 880px)");
+    const [is352px] = useMediaQuery("(max-width: 352px)");
     const scrollRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -61,7 +62,7 @@ const SocialMediaBanner = ({
                         textTransform="uppercase"
                         bgGradient="linear(0deg, rgba(4, 42, 158, 0.6) 4%, #FFFFFF 30%)"
                         bgClip="text"
-                        fontSize={is880px ? "5rem" : "9.391rem"}
+                        fontSize={is352px ? "3rem" : is880px ? "5rem" : "9.391rem"}
                     >
                         <Text>Seeland</Text>
                         <Text textAlign={is880px ? "center" : "right"}>
@@ -97,7 +98,7 @@ const SocialMediaBanner = ({
                 </Flex>
                 <HStack zIndex="5" position="absolute" top="110%" left="50%" transform="translateX(-50%)">
                     {is880px && (
-                        <Button onClick={scrollLeft} position="absolute" left="-70px" zIndex="10" variant="ghost"
+                        <Button onClick={scrollLeft} position="absolute" left="-5vw" zIndex="10" variant="ghost"
                                 _hover={{bg: "none"}}>
                             <AiOutlineArrowLeft size="30px" color="#32BCF1"/>
                         </Button>
@@ -155,7 +156,7 @@ const SocialMediaBanner = ({
                         <Button
                             onClick={scrollRight}
                             position="absolute"
-                            right="-70px"
+                            right="-5vw"
                             zIndex="10"
                             variant="ghost"
                             _hover={{bg: "none"}}

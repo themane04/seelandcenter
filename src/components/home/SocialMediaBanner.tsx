@@ -14,6 +14,7 @@ const SocialMediaBanner = ({
                            }: ISocialMediaBanner) => {
     const [is880px] = useMediaQuery("(max-width: 880px)");
     const [is352px] = useMediaQuery("(max-width: 352px)");
+    const [is378px] = useMediaQuery("(max-width: 378px)");
     const scrollRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -123,6 +124,7 @@ const SocialMediaBanner = ({
                             iconSize="60px"
                             backgroundColor={"transparent"}
                             motionMt={"30%"}
+                            left={is378px ? "85%" : "90%"}
                         />
                     )}
                 </HStack>

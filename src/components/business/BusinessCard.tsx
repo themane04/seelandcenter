@@ -1,4 +1,4 @@
-import {Box, HStack} from "@chakra-ui/react";
+import {Box, HStack, useMediaQuery} from "@chakra-ui/react";
 import businessData from "../.././assets/business/businesses.json";
 import {useEffect, useRef, useState} from "react";
 import BusinessCardContent from "./BusinessCardContent.tsx";
@@ -8,6 +8,7 @@ const BusinessCard = () => {
     const scrollRef = useRef<HTMLDivElement>(null);
     const [isScrolledLeft, setIsScrolledLeft] = useState(true);
     const [isScrolledRight, setIsScrolledRight] = useState(false);
+    const [is705px] = useMediaQuery("(max-width: 705px)");
 
     const checkScrollPosition = () => {
         if (scrollRef.current) {
@@ -73,6 +74,7 @@ const BusinessCard = () => {
                     hideRight={isScrolledRight}
                     iconSize={"70px"}
                     motionMt={"54%"}
+                    left={is705px ? "80%" : "90%"}
                 />
             </HStack>
         </>

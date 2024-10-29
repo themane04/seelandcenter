@@ -63,6 +63,7 @@ const BusinessCard = () => {
                     height="500px"
                     alignItems="center"
                     paddingLeft="35vw"
+                    paddingRight="35vw"
                 >
                     {businessData.map((business) => (
                         <BusinessCardContent key={business.id} business={business}/>

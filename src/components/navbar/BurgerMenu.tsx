@@ -53,5 +53,4 @@ const BurgerMenu = ({isOpen, onClose}: IBurgerMenu) => {
     );
 };
 
-
 export default BurgerMenu;

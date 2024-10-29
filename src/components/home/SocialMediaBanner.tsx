@@ -39,10 +39,9 @@ const SocialMediaBanner = ({
         <>
             <Box
                 width="100%"
-                height="fit-content"
                 position="absolute"
                 zIndex="1000"
-                top={"190px"}
+                top={"20vh"}
             >
                 <Flex
                     align="center"

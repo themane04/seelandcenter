@@ -10,7 +10,8 @@ const NavbarLinks = ({
         <>
             <Link
                 sx={navbarLinksStyle}
-                onClick={onClick} display={logo ? "flex" : "none"}
+                onClick={() => document.getElementById("home")?.scrollIntoView({behavior: "smooth"})}
+                display={logo ? "flex" : "none"}
             >
                 <Image
                     src={"/logo/logo_t.png"}

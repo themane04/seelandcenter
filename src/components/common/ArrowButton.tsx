@@ -35,9 +35,7 @@ const ArrowButton = ({
             <Button
                 onClick={onClick}
                 zIndex="10"
-                _hover={{bgColor: "none"}}
                 _active={{bgColor: "none"}}
-                className="scale-on-hover"
                 backgroundColor={backgroundColor}
                 alignItems="center"
                 justifyContent="center"
@@ -45,6 +43,12 @@ const ArrowButton = ({
                 width={iconSize}
                 borderRadius="full"
                 mt={buttonMt}
+                _hover={{
+                    bgColor: "none",
+                    transform: "scale(1.1)",
+                    transition: "all 0.4s ease-in-out",
+                }}
+                cursor={"pointer"}
             >
                 {isRight ? (
                     <AiOutlineArrowRight size={iconSize} color="#32BCF1"/>

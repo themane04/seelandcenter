@@ -24,7 +24,8 @@ const SeelandSocialsAndNavigation = () => {
                 >
                     <Link
                         onClick={() => document.getElementById("home")?.scrollIntoView({behavior: "smooth"})}
-                        className={"scale-on-hover"}
+                        transition="all 0.4s ease-in-out"
+                        _hover={{transform: "scale(1.1)"}}
                     >
                         <Image
                             src={"/logo/logo_t.png"}

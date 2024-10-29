@@ -20,10 +20,12 @@ const ActionButton = ({
                 boxShadow="0px 0px 18.6px 4px rgba(0, 0, 0, 0.25)"
                 color="#FFFFFF"
                 padding="10px"
-                className={"scale-on-hover"}
                 scrollSnapAlign="center"
                 ml={is880px ? "40px" : ""}
                 mr={is880px ? "40px" : ""}
+                transition="all 0.4s ease-in-out"
+                _hover={{ transform: "scale(1.1)"}}
+                cursor={"pointer"}
             >
                 <HStack spacing="10px" align="center" justify="center" letterSpacing="0.24em">
                     <GoMegaphone size="30px" color="#32BCF1"/>

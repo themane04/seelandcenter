@@ -15,8 +15,12 @@ const BusinessCardContent = ({business}: IBusinessCardContent) => {
                 boxShadow="0px 0px 33px 14px rgba(0, 0, 0, 0.25)"
                 position="relative"
                 transition="all 0.4s ease-in-out"
-                className="scale-on-hover"
                 flexShrink={0}
+                _hover={{
+                    transform: "scale(1.1)",
+                    transition: "all 0.4s ease-in-out",
+                }}
+                cursor={"pointer"}
             >
                 <Box
                     backgroundImage={`url(${business.image_path})`}

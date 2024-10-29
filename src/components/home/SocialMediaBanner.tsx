@@ -69,7 +69,11 @@ const SocialMediaBanner = ({
                             Center
                         </Text>
                     </Box>
-                    <VStack spacing="15px" align="center" display={is880px ? "none" : "flex"}>
+                    <VStack
+                        spacing="15px"
+                        align="center"
+                        display={is880px ? "none" : "flex"}
+                    >
                         <ImageDot
                             currentImageIndex={currentImageIndex}
                             handleDotClick={handleDotClick}
@@ -122,6 +126,24 @@ const SocialMediaBanner = ({
                         />
                     )}
                 </HStack>
+                {is880px && (
+                    <HStack
+                        spacing="15px"
+                        align="center"
+                        justify="center"
+                        position="absolute"
+                        bottom="10%"
+                        left="50%"
+                        top={"550px"}
+                        transform="translateX(-50%)"
+                    >
+                        <ImageDot
+                            currentImageIndex={currentImageIndex}
+                            handleDotClick={handleDotClick}
+                            imageData={imageData}
+                        />
+                    </HStack>
+                )}
             </Box>
         </>
     );

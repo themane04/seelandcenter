@@ -49,7 +49,7 @@ const BusinessCard = () => {
                     onClick={scrollLeft}
                     hideLeft={isScrolledLeft}
                     iconSize={"70px"}
-                    buttonMt={"40px"}
+                    motionMt={"47%"}
                 />
                 <Box
                     ref={scrollRef}
@@ -72,7 +72,7 @@ const BusinessCard = () => {
                     isRight={true}
                     hideRight={isScrolledRight}
                     iconSize={"70px"}
-                    buttonMt={"40px"}
+                    motionMt={"47%"}
                 />
             </HStack>
         </>

@@ -20,27 +20,31 @@ const Business = () => {
                         "url(/mall/seeland_outside.jpg)"
                     }
                     backgroundSize="cover"
+                    backgroundPosition="center center"
+                    backgroundRepeat="no-repeat"
                     filter="blur(5px)"
                     opacity={0.9}
                     width="100vw"
-                    height="520px"
+                    height="100vh"
+                    maxH={"600px"}
                     position="absolute"
                     zIndex={0}
-                    top="57%"
+                    top="280"
                     left="0"
-                    transform="translateY(-50%)"
                 />
-                <Text
-                    textTransform={"uppercase"}
-                    pt={"300px"}
-                    mb={"100px"}
-                    width={"100%"}
-                    textAlign={"center"}
-                    ml={"-17vw"}
-                >
-                    Geschäfte
-                </Text>
-                <BusinessCard/>
+                <Box zIndex={2}>
+                    <Text
+                        textTransform={"uppercase"}
+                        pt={"150px"}
+                        mb={"100px"}
+                        width={"100%"}
+                        textAlign={"center"}
+                        ml={"-9vw"}
+                    >
+                        Geschäfte
+                    </Text>
+                    <BusinessCard/>
+                </Box>
             </VStack>
         </>
     );

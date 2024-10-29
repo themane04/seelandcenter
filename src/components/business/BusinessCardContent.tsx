@@ -31,7 +31,7 @@ const BusinessCardContent = ({business}: IBusinessCardContent) => {
                     width="100%"
                     height="70px"
                     boxShadow="0px 6px 10.5px rgba(0, 0, 0, 0.4)"
-                    backgroundColor="rgba(158, 158, 158, 0.2)"
+                    backgroundColor="rgba(158, 158, 158, 0.8)"
                     backdropFilter="blur(3px)"
                     color="red"
                     padding="4"

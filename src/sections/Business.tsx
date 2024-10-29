@@ -11,9 +11,8 @@ const Business = () => {
                 letterSpacing={"0.1em"}
                 fontWeight={"bold"}
                 lineHeight={"200%"}
-                textAlign={"left"}
-                padding="0 20px 300px 0"
                 position="relative"
+                pb={"300px"}
             >
                 <Box
                     backgroundImage={
@@ -27,11 +26,20 @@ const Business = () => {
                     height="520px"
                     position="absolute"
                     zIndex={0}
-                    top="45%"
+                    top="57%"
                     left="0"
                     transform="translateY(-50%)"
                 />
-                <Text textTransform={"uppercase"} mt={"100px"}>Geschäfte</Text>
+                <Text
+                    textTransform={"uppercase"}
+                    pt={"300px"}
+                    mb={"100px"}
+                    width={"100%"}
+                    textAlign={"center"}
+                    ml={"-17vw"}
+                >
+                    Geschäfte
+                </Text>
                 <BusinessCard/>
             </VStack>
         </>

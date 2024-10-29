@@ -1,11 +1,11 @@
-import {Box, Button, Flex, HStack, Image, Text, useMediaQuery, VStack} from "@chakra-ui/react";
+import {Box, Flex, HStack, Text, useMediaQuery, VStack} from "@chakra-ui/react";
 import {ISocialMediaBanner} from "../../interfaces/home.interface.ts";
 import buttonData from "../../assets/home/action_buttons.json";
-import {GoMegaphone} from "react-icons/go";
 import SocialMediaLinks from "./SocialMediaLinks.tsx";
 import {useEffect, useRef} from "react";
-import {AiOutlineArrowLeft, AiOutlineArrowRight} from "react-icons/ai";
 import ImageDot from "./ImageDot.tsx";
+import ActionButton from "./ActionButton.tsx";
+import ArrowButton from "../common/ArrowButton.tsx";
 
 const SocialMediaBanner = ({
                                currentImageIndex,
@@ -77,12 +77,21 @@ const SocialMediaBanner = ({
                         />
                     </VStack>
                 </Flex>
-                <HStack zIndex="5" position="absolute" top="110%" left="50%" transform="translateX(-50%)">
+                <HStack
+                    zIndex="5"
+                    position="absolute"
+                    top="110%"
+                    left="50%"
+                    transform="translateX(-50%)"
+                >
                     {is880px && (
-                        <Button onClick={scrollLeft} position="absolute" left="-5vw" zIndex="10" variant="ghost"
-                                _hover={{bg: "none"}}>
-                            <AiOutlineArrowLeft size="30px" color="#32BCF1"/>
-                        </Button>
+                        <ArrowButton
+                            onClick={scrollLeft}
+                            left="-5vw"
+                            iconSize="60px"
+                            backgroundColor={"transparent"}
+                            motionMt={"30%"}
+                        />
                     )}
                     <Box
                         ref={scrollRef}
@@ -96,56 +105,21 @@ const SocialMediaBanner = ({
                         overflow="hidden"
                     >
                         {buttonData.map((button) => (
-                            <Box
+                            <ActionButton
                                 key={button.id}
-                                width="224px"
-                                minWidth="224px"
-                                height="77px"
-                                backgroundColor="rgba(50, 188, 241, 0.19)"
-                                borderRadius="6px"
-                                backdropFilter="blur(3px)"
-                                boxShadow="0px 0px 18.6px 4px rgba(0, 0, 0, 0.25)"
-                                color="#FFFFFF"
-                                padding="10px"
-                                className="scale-on-hover"
-                                scrollSnapAlign="center"
-                                ml={is880px ? "40px" : ""}
-                                mr={is880px ? "40px" : ""}
-                            >
-                                <HStack spacing="10px" align="center" justify="center" letterSpacing="0.24em">
-                                    <GoMegaphone size="30px" color="#32BCF1"/>
-                                    <Text textTransform="uppercase" fontSize="1.125rem">
-                                        {button.name}
-                                    </Text>
-                                </HStack>
-                                <HStack
-                                    fontWeight="light"
-                                    letterSpacing="0.1em"
-                                    fontSize="0.875rem"
-                                    align="center"
-                                    justify="right"
-                                    spacing="25px"
-                                    mt="5px"
-                                >
-                                    <Text>Anschauen</Text>
-                                    <Image src="/home/arrow_right.svg" width="44.87px" height="14px"/>
-                                </HStack>
-                            </Box>
+                                id={button.id}
+                                name={button.name}
+                            />
                         ))}
                     </Box>
                     {is880px && (
-                        <>
-                            <Button
-                                onClick={scrollRight}
-                                position="absolute"
-                                right="-5vw"
-                                zIndex="10"
-                                variant="ghost"
-                                _hover={{bg: "none"}}
-                            >
-                                <AiOutlineArrowRight size="30px" color="#32BCF1"/>
-                            </Button>
-                        </>
+                        <ArrowButton
+                            onClick={scrollRight}
+                            isRight={true}
+                            iconSize="60px"
+                            backgroundColor={"transparent"}
+                            motionMt={"30%"}
+                        />
                     )}
                 </HStack>
             </Box>

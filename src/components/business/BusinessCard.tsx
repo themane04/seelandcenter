@@ -1,88 +1,79 @@
-import {Box, HStack, Image, Text, VStack} from "@chakra-ui/react";
+import {Box, HStack} from "@chakra-ui/react";
 import businessData from "../.././assets/business/businesses.json";
-import {useEffect, useRef} from "react";
+import {useEffect, useRef, useState} from "react";
+import BusinessCardContent from "./BusinessCardContent.tsx";
+import ArrowButton from "../common/ArrowButton.tsx";
 
 const BusinessCard = () => {
     const scrollRef = useRef<HTMLDivElement>(null);
+    const [isScrolledLeft, setIsScrolledLeft] = useState(true);
+    const [isScrolledRight, setIsScrolledRight] = useState(false);
+
+    const checkScrollPosition = () => {
+        if (scrollRef.current) {
+            const {scrollLeft, scrollWidth, clientWidth} = scrollRef.current;
+            setIsScrolledLeft(scrollLeft <= 500);
+            setIsScrolledRight(scrollLeft + clientWidth >= scrollWidth - 100);
+        }
+    };
+
+    const scrollLeft = () => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollBy({left: -1500, behavior: "smooth"});
+        }
+    };
+
+    const scrollRight = () => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollBy({left: 1500, behavior: "smooth"});
+        }
+    };
 
     useEffect(() => {
-        if (scrollRef.current) {
-            scrollRef.current.scrollLeft = 0;
-        }
+        checkScrollPosition();
+        scrollRef.current?.addEventListener("scroll", checkScrollPosition);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+        return () => scrollRef.current?.removeEventListener("scroll", checkScrollPosition);
     }, []);
 
     return (
         <>
             <HStack
-                maxWidth="1200px"
-                mx="auto"
-                padding="100px"
-                zIndex={5}
+                width="100vw"
+                overflowX="hidden"
+                justifyContent="center"
+                alignItems="center"
+                spacing="0"
             >
+                <ArrowButton
+                    onClick={scrollLeft}
+                    hideLeft={isScrolledLeft}
+                    iconSize={"70px"}
+                    buttonMt={"40px"}
+                />
                 <Box
                     ref={scrollRef}
+                    minWidth="100vw"
                     display="flex"
                     overflowX="auto"
-                    whiteSpace="nowrap"
-                    maxWidth="100%"
-                    scrollSnapType={"x mandatory"}
-                    scrollBehavior={"smooth"}
+                    scrollSnapType="x mandatory"
+                    scrollBehavior="smooth"
                     gap="80px"
-                    height={"450px"}
-                    alignItems={"center"}
+                    height="500px"
+                    alignItems="center"
+                    paddingLeft="35vw"
                 >
                     {businessData.map((business) => (
-                        <Box
-                            key={business.id}
-                            width="270px"
-                            minWidth="270px"
-                            height="386px"
-                            bg="gray.800"
-                            borderRadius="16px"
-                            overflow="hidden"
-                            boxShadow="0px 0px 33px 14px rgba(0, 0, 0, 0.25)"
-                            position="relative"
-                            transition="all 0.4s ease-in-out"
-                            className="scale-on-hover"
-                            scrollSnapAlign="start"
-                            flexShrink={0}
-                        >
-                            <Box
-                                backgroundImage={`url(${business.image_path})`}
-                                width="100%"
-                                height="100%"
-                                backgroundSize="cover"
-                                backgroundPosition="center"
-                            />
-                            <HStack
-                                position="absolute"
-                                bottom="0"
-                                width="100%"
-                                height="70px"
-                                boxShadow="0px 6px 10.5px rgba(0, 0, 0, 0.4)"
-                                backgroundColor="rgba(158, 158, 158, 0.2)"
-                                backdropFilter="blur(3px)"
-                                color="red"
-                                padding="4"
-                                lineHeight={1}
-                                justifyContent="space-between"
-                            >
-                                <VStack alignItems="flex-start">
-                                    <Text fontSize="0.875rem" fontWeight="bold" textTransform="uppercase"
-                                          color="#FFFFFF">
-                                        {business.name}
-                                    </Text>
-                                    <Text fontSize="0.688rem" color="#32BCF1">
-                                        Anschauen
-                                    </Text>
-                                </VStack>
-                                <Box position="absolute" right="5" bottom="4" p="2">
-                                    <Image src="/business/icons/arrow.svg" alt="arrow" width="26px" height="26px"/>
-                                </Box>
-                            </HStack>
-                        </Box>
+                        <BusinessCardContent key={business.id} business={business}/>
                     ))}
                 </Box>
+                <ArrowButton
+                    onClick={scrollRight}
+                    isRight={true}
+                    hideRight={isScrolledRight}
+                    iconSize={"70px"}
+                    buttonMt={"40px"}
+                />
             </HStack>
         </>
     )

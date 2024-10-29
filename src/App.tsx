@@ -5,6 +5,7 @@ import "./style/css/Animations.css";
 import {useMediaQuery} from "@chakra-ui/react";
 import ScreenSizeLimit from "./components/common/ScreenSizeLimit.tsx";
 import Business from "./sections/Business.tsx";
+import Footer from "./components/common/Footer.tsx";
 
 function App() {
     const [is333px] = useMediaQuery("(max-width: 333px)");
@@ -17,6 +18,7 @@ function App() {
                     <Navbar/>
                     <Home/>
                     <Business/>
+                    <Footer/>
                 </>
             )}
         </>

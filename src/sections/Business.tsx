@@ -12,11 +12,11 @@ const Business = () => {
                 fontWeight={"bold"}
                 lineHeight={"200%"}
                 position="relative"
-                pb={"300px"}
+                pb={"150px"}
             >
                 <Box
                     backgroundImage={
-                        "linear-gradient(90deg, rgba(30, 30, 30, 1) 30%, rgba(20, 20, 20, 0.1) 100%)," +
+                        "linear-gradient(90deg, #141414 30%, rgba(20, 20, 20, 0.1) 100%)," +
                         "url(/mall/seeland_outside.jpg)"
                     }
                     backgroundSize="cover"

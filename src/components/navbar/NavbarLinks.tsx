@@ -3,11 +3,15 @@ import {navbarLinksStyle} from "../../style/ts/Navbar.style.ts";
 import {INavbarLinks} from "../../interfaces/navbar.interface.ts";
 
 const NavbarLinks = ({
-                         onClick
+                         onClick,
+                         logo = true
                      }: INavbarLinks) => {
     return (
         <>
-            <Link sx={navbarLinksStyle} onClick={onClick}>
+            <Link
+                sx={navbarLinksStyle}
+                onClick={onClick} display={logo ? "flex" : "none"}
+            >
                 <Image
                     src={"/logo/logo_t.png"}
                     width={"50px"}

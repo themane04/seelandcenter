@@ -1,4 +1,4 @@
-import {Text, VStack} from "@chakra-ui/react";
+import {Link, Text, VStack} from "@chakra-ui/react";
 
 interface ICenterManagement {
     pb?: string;
@@ -20,12 +20,18 @@ const CenterManagement = ({pb}: ICenterManagement) => {
                 <Text>Centerio AG</Text>
                 <Text>Klausstrasse 48</Text>
                 <Text>8034 Zürich</Text>
-                <Text
-                    textTransform={"lowercase"}
-                    color={"rgba(50, 188, 241, 0.8)"}
+                <Link
+                    href="mailto:info@centerio.ch"
+                    transition="all 0.4s ease-in-out"
+                    _hover={{textDecoration: "none", transform: "scale(1.1)"}}
                 >
-                    info@centerio.ch
-                </Text>
+                    <Text
+                        textTransform="lowercase"
+                        color="rgba(50, 188, 241, 0.8)"
+                    >
+                        info@centerio.ch
+                    </Text>
+                </Link>
             </VStack>
         </>
     );

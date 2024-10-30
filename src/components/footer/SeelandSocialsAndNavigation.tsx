@@ -20,7 +20,6 @@ const SeelandSocialsAndNavigation = () => {
                     justifyContent={"center"}
                     alignItems={"center"}
                     gap={"20px"}
-                    mt={"20px"}
                 >
                     <Link
                         onClick={() => document.getElementById("home")?.scrollIntoView({behavior: "smooth"})}
@@ -51,7 +50,6 @@ const SeelandSocialsAndNavigation = () => {
                     justifyContent={"center"}
                     alignItems={"center"}
                     gap={"100px"}
-                    mt={"20px"}
                 >
                     <SocialMediaLinks/>
                 </Box>
@@ -62,12 +60,41 @@ const SeelandSocialsAndNavigation = () => {
                     justifyContent={"center"}
                     alignItems={"center"}
                     gap={"50px"}
-                    mt={is731px ? "50px" : "20px"}
-                    pb={"20px"}
+                    mt={is731px ? "50px" : ""}
                     flexDirection={is731px ? "column" : "row"}
                 >
                     <NavbarLinks logo={false}/>
                 </Box>
+                <HStack height={"100%"}>
+                    <Text
+                        color={"rgba(50, 188, 241, 0.8)"}
+                        fontSize={"1rem"}
+                        letterSpacing={"0.1em"}
+                        fontWeight={"bold"}
+                        lineHeight={"200%"}
+                        textAlign={"center"}
+                        w={"100%"}
+                        display={"flex"}
+                        justifyContent={"center"}
+                        alignItems={"center"}
+                        gap={"20px"}
+                    >
+                        <Link
+                            href={"/imprint"}
+                            transition="all 0.4s ease-in-out"
+                            _hover={{transform: "scale(1.1)"}}
+                        >
+                            Impressum
+                        </Link>
+                        <Link
+                            href={"/privacy-policy"}
+                            transition="all 0.4s ease-in-out"
+                            _hover={{transform: "scale(1.1)"}}
+                        >
+                            Datenschutz
+                        </Link>
+                    </Text>
+                </HStack>
             </VStack>
         </>
     );

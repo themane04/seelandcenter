@@ -11,7 +11,7 @@ const Footer = () => {
                 bg={"#1E1E1E"}
                 bgColor={"#000000"}
                 width={"100%"}
-                height={is1842px ? "fit-content" : "200px"}
+                height={is1842px ? "fit-content" : "300px"}
                 mt={"100px"}
                 textTransform={"uppercase"}
             >

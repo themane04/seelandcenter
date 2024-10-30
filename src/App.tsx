@@ -1,27 +1,40 @@
-import Home from "./sections/Home.tsx";
 import Navbar from "./components/navbar/Navbar.tsx";
 import "./style/css/global.css";
-import {useMediaQuery} from "@chakra-ui/react";
+import {ChakraProvider, useMediaQuery} from "@chakra-ui/react";
 import ScreenSizeLimit from "./components/common/ScreenSizeLimit.tsx";
-import Business from "./sections/Business.tsx";
-import Footer from "./components/common/Footer.tsx";
+import {IRoutes} from "./interfaces/route.interface.ts";
+import {useRouteService} from "./services/route.service.ts";
+import theme from "./config/chakraTheme.ts";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 function App() {
     const [is333px] = useMediaQuery("(max-width: 333px)");
+    const routes: IRoutes[] = useRouteService();
+
     return (
-        <>
+        <ChakraProvider theme={theme}>
             {is333px ? (
                 <ScreenSizeLimit/>
             ) : (
-                <>
-                    <Navbar/>
-                    <Home/>
-                    <Business/>
-                    <Footer/>
-                </>
+                <BrowserRouter>
+                    <Routes>
+                        {routes.map((route) => (
+                            <Route
+                                key={route.path}
+                                path={route.path}
+                                element={
+                                    <>
+                                        <Navbar/>
+                                        <route.element/>
+                                    </>
+                                }
+                            />
+                        ))}
+                    </Routes>
+                </BrowserRouter>
             )}
-        </>
-    )
+        </ChakraProvider>
+    );
 }
 
 export default App

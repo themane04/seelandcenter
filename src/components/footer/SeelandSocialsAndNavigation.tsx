@@ -1,9 +1,11 @@
-import {Box, HStack, Image, Link, Text, useMediaQuery, VStack} from "@chakra-ui/react";
+import {Box, HStack, Link, Text, useMediaQuery, VStack} from "@chakra-ui/react";
 import SocialMediaLinks from "../home/SocialMediaLinks.tsx";
 import NavbarLinks from "../navbar/NavbarLinks.tsx";
+import LogoAndText from "./LogoAndText.tsx";
 
 const SeelandSocialsAndNavigation = () => {
     const [is731px] = useMediaQuery("(max-width: 731px)");
+    const [is1842px] = useMediaQuery("(max-width: 1842px)");
     return (
         <>
             <VStack
@@ -11,38 +13,30 @@ const SeelandSocialsAndNavigation = () => {
                 height={"100%"}
                 justifyContent={"center"}
                 alignItems={"center"}
-                spacing={"0"}
+                spacing={is1842px ? "10" : "0"}
             >
-                <HStack
-                    width={"100%"}
-                    height={"100%"}
-                    display={"flex"}
-                    justifyContent={"center"}
-                    alignItems={"center"}
-                    gap={"20px"}
-                >
-                    <Link
-                        onClick={() => document.getElementById("home")?.scrollIntoView({behavior: "smooth"})}
-                        transition="all 0.4s ease-in-out"
-                        _hover={{transform: "scale(1.1)"}}
+                {!is731px ? (
+                    <HStack
+                        width={"100%"}
+                        height={"100%"}
+                        display={"flex"}
+                        justifyContent={"center"}
+                        alignItems={"center"}
+                        gap={"20px"}
                     >
-                        <Image
-                            src={"/logo/logo_t.png"}
-                            width={"50px"}
-                            height={"50px"}
-                        />
-                    </Link>
-                    <Text
-                        color={"rgba(50, 188, 241, 0.8)"}
-                        fontSize={"1.5rem"}
-                        letterSpacing={"0.1em"}
-                        fontWeight={"bold"}
-                        lineHeight={"200%"}
-                        textAlign={"center"}
+                        <LogoAndText/>
+                    </HStack>
+                ) : (
+                    <VStack
+                        width={"100%"}
+                        height={"100%"}
+                        display={"flex"}
+                        justifyContent={"center"}
+                        alignItems={"center"}
                     >
-                        Seelandcenter
-                    </Text>
-                </HStack>
+                        <LogoAndText/>
+                    </VStack>
+                )}
                 <Box
                     width={"100%"}
                     height={"100%"}

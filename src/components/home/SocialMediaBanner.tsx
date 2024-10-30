@@ -107,7 +107,6 @@ const SocialMediaBanner = ({
                         scrollBehavior={"smooth"}
                         padding="30px"
                         gap={is880px ? "" : "30px"}
-                        overflow="hidden"
                     >
                         {buttonData.map((button) => (
                             <ActionButton
@@ -124,7 +123,7 @@ const SocialMediaBanner = ({
                             iconSize="60px"
                             backgroundColor={"transparent"}
                             motionMt={"30%"}
-                            left={is378px ? "85%" : "90%"}
+                            left={is378px ? "250px" : "90%"}
                         />
                     )}
                 </HStack>

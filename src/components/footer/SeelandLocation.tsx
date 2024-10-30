@@ -1,6 +1,8 @@
-import {Text, VStack} from "@chakra-ui/react";
+import {Box, Link, Text, useMediaQuery, VStack} from "@chakra-ui/react";
 
 const SeelandLocation = () => {
+    const [is1842px] = useMediaQuery("(max-width: 1842px)");
+
     return (
         <>
             <VStack
@@ -11,10 +13,23 @@ const SeelandLocation = () => {
                 spacing={"0"}
                 color={"#FFFFFF"}
             >
-                <Text color={"rgba(50, 188, 241, 0.8)"}>Seelandcenter</Text>
-                <Text>Bielstrasse 9</Text>
-                <Text>3250 Lyss</Text>
-                <Text>info@seelandcenter.ch</Text>
+                <Box textAlign={is1842px ? "center" : "left"}>
+                    <Text color={"rgba(50, 188, 241, 0.8)"}>Seelandcenter</Text>
+                    <Text>Bielstrasse 9</Text>
+                    <Text>3250 Lyss</Text>
+                    <Link
+                        href="mailto:info@seelandcenter.ch"
+                        transition="all 0.4s ease-in-out"
+                        _hover={{textDecoration: "none", transform: "scale(1.1)"}}
+                    >
+                        <Text
+                            textTransform="lowercase"
+                            color="rgba(50, 188, 241, 0.8)"
+                        >
+                            info@seelandcenter.ch
+                        </Text>
+                    </Link>
+                </Box>
             </VStack>
         </>
     );

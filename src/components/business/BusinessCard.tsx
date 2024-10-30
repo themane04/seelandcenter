@@ -75,7 +75,7 @@ const BusinessCard = () => {
                     hideRight={isScrolledRight}
                     iconSize={"70px"}
                     motionMt={"54%"}
-                    left={is705px ? "80%" : "90%"}
+                    left={is705px ? "75%" : "90%"}
                 />
             </HStack>
         </>

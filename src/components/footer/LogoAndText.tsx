@@ -26,7 +26,7 @@ const LogoAndText = () => {
                 textAlign={"center"}
                 mt={is731px ? "" : "20px"}
             >
-                Seelandcenter
+                Seeland center
             </Text>
         </>
     );

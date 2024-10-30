@@ -1,7 +1,7 @@
 import {Box, HStack, Text, VStack} from "@chakra-ui/react";
 import imprintData from "../assets/footer/imprint.json";
 import CenterioEmail from "../components/common/CenterioEmail.tsx";
-import {titleInfoText} from "../style/ts/Impressum.style.ts";
+import {titleInfoText} from "../style/ts/Footer.style.ts";
 
 const Imprint = () => {
     return (
@@ -21,6 +21,7 @@ const Imprint = () => {
                     mb={5}
                     bgGradient="linear(0deg, rgba(4, 42, 158, 0.6) 4%, #FFFFFF 50%)"
                     bgClip="text"
+                    textTransform={"uppercase"}
                 >
                     Impressum
                 </Text>

@@ -6,6 +6,7 @@ import {IRoutes} from "./interfaces/route.interface.ts";
 import {useRouteService} from "./services/route.service.ts";
 import theme from "./config/chakraTheme.ts";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Footer from "./components/common/Footer.tsx";
 
 function App() {
     const [is333px] = useMediaQuery("(max-width: 333px)");
@@ -26,6 +27,7 @@ function App() {
                                     <>
                                         <Navbar/>
                                         <route.element/>
+                                        <Footer/>
                                     </>
                                 }
                             />

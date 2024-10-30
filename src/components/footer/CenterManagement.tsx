@@ -1,4 +1,5 @@
-import {Box, Image, Link, Text, useMediaQuery, VStack} from "@chakra-ui/react";
+import {Box, Image, Text, useMediaQuery, VStack} from "@chakra-ui/react";
+import CenterioEmail from "../common/CenterioEmail.tsx";
 
 interface ICenterManagement {
     pb?: string;
@@ -28,18 +29,7 @@ const CenterManagement = ({pb}: ICenterManagement) => {
                     <Text>Centerio AG</Text>
                     <Text>Klausstrasse 48</Text>
                     <Text>8034 Zürich</Text>
-                    <Link
-                        href="mailto:info@centerio.ch"
-                        transition="all 0.4s ease-in-out"
-                        _hover={{textDecoration: "none", transform: "scale(1.1)"}}
-                    >
-                        <Text
-                            textTransform="lowercase"
-                            color="rgba(50, 188, 241, 0.8)"
-                        >
-                            info@centerio.ch
-                        </Text>
-                    </Link>
+                    <CenterioEmail/>
                 </Box>
             </VStack>
         </>

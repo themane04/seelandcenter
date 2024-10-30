@@ -4,7 +4,6 @@ import imageData from "../assets/home/images.json";
 import {imageBoxStyle} from "../style/ts/Home.style.ts";
 import SocialMediaBanner from "../components/home/SocialMediaBanner.tsx";
 import Business from "../sections/Business.tsx";
-import Footer from "../components/common/Footer.tsx";
 
 const Home = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(4);
@@ -39,7 +38,6 @@ const Home = () => {
                 />
             </Box>
             <Business/>
-            <Footer/>
         </>
     );
 };

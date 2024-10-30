@@ -15,7 +15,7 @@ export interface PrivacyPolicySection {
 }
 
 export interface SectionProps {
-    data: PrivacyPolicySection;
+    data: any;
     level?: number;
     sectionNumber?: string;
 }

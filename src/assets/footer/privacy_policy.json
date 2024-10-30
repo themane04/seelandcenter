@@ -139,11 +139,30 @@
         "Sie können Ihren Browser womöglich auch so konfigurieren, dass keine Cookies auf Ihrem Computer gespeichert werden oder stets ein Hinweis erscheint, wenn Sie ein neues Cookie erhalten. Auf den nachfolgenden Seiten finden Sie Erläuterungen, wie Sie die Bearbeitung von Cookies bei ausgewählten Browsern konfigurieren können."
       ],
       "list": [
-        "Google Chrome für Desktop",
-        "Mozilla Firefox",
-        "Microsoft Windows Internet Explorer",
-        "Microsoft Windows Internet Explorer Mobile",
-        "Apple Safari"
+        {
+          "text": "Google Chrome für Desktop",
+          "link": "https://support.google.com/chrome/answer/95647?hl=de"
+        },
+        {
+          "text": "Google Chrome für Mobile",
+          "link": "https://support.google.com/chrome/answer/2392709?hl=de&co=GENIE.Platform%3DAndroid&oco=1"
+        },
+        {
+          "text": "Apple Safari",
+          "link": "https://support.apple.com/guide/safari/manage-cookies-sfri11471/mac"
+        },
+        {
+          "text": "Microsoft Windows Internet Explorer",
+          "link": "https://support.microsoft.com/de-de/windows/verwalten-von-cookies-in-microsoft-edge-anzeigen-zulassen-blockieren-l%C3%B6schen-und-verwenden-168dab11-0753-043d-7c16-ede5947fc64d"
+        },
+        {
+          "text": "Microsoft Windows Internet Explorer Mobile",
+          "link": "https://support.microsoft.com/en-us/windows/what-does-it-mean-if-windows-isn-t-supported-08f3b92d-7539-671e-1452-2e71cdad18b5"
+        },
+        {
+          "text": "Mozilla Firefox",
+          "link": "https://support.mozilla.org/de/kb/verbesserter-schutz-aktivitatenverfolgung-desktop?redirectslug=cookies-erlauben-und-ablehnen&redirectlocale=de"
+        }
       ],
       "additional_information_2": [
         "Die Deaktivierung von Cookies kann dazu führen, dass Sie nicht alle Funktionen unserer Webseite nutzen können."
@@ -177,9 +196,24 @@
           "Wir nutzen den Webanalyse-Dienst Google Analytics von Google Ireland Limited (Gordon House, 4 Barrow St, Dublin, D04 E5W5, Irland) bzw. Google LLC, 1600 Amphitheatre Park-way, Mountain View, CA 94043, USA (Google)."
         ],
         "additional_information": [
-          "Abweichend von der Beschreibung in Ziffer 5.3.1 werden in Google Analytics (in der hier verwendeten Version \"Google Analytics 4\") IP-Adressen nicht protokolliert oder gespeichert. Bei aus der EU stammenden Zugriffen werden IP-Adressdaten nur zur Ableitung von Standortdaten verwendet und danach sofort gelöscht. Bei der Erhebung von Messdaten in Google Analytics erfolgen alle IP-Suchen auf EU-basierten Servern, bevor der Traffic zur Bearbeitung auf Analytics-Server weitergeleitet wird. In Google Analytics werden regionale Rechenzentren genutzt. Wird in Google Analytics eine Verbindung zum nächstgelegenen verfügbaren Rechenzentrum von Google hergestellt, werden die Messdaten über eine verschlüsselte HTTPS-Verbindung an Analytics gesendet. In diesen Zentren werden die Daten weiter verschlüsselt, bevor sie an die Bearbeitungsserver von Analytics weitergeleitet und auf der Plattform verfügbar gemacht werden. Anhand der IP-Adressen wird das das am besten geeignete lokale Rechenzentrum ermittelt. Hierbei kann es auch zu einer Datenübermittlung an Server im Ausland, z.B. den USA, kommen (vgl. dazu, insb. zum Fehlen eines angemessenen Datenschutzniveaus und zu den vorgesehenen Garantien, Ziffer 4.2).",
-          "Dabei nutzen wir auch die technische Erweiterung „Google Signals\", die ein Cross Device Tracking – also ein endgerätübergreifendes Tracking- ermöglicht. Damit kann eine Zuordnung eines einzelnen Webseitenbesuchers mit verschiedenen Endgeräten hergestellt werden. Dies geschieht jedoch nur dann, wenn der Besucher sich bei den Webseitenbesuchen in einen Google-Dienst eingeloggt hat und zugleich in seinen Google-Konto-Einstellungen die Option „personalisierte Werbung\" aktiviert hat. Auch dann werden uns aber keine personenbezogenen Daten oder Nutzerprofile zugänglich; sie bleiben für uns anonym. Wenn Sie die Nutzung von „Google Signals\" nicht wünschen, können Sie in Ihren Google-Konto-Einstellungen die Option „personalisierte Werbung\" deaktivieren.",
-          "Nutzer können die Erfassung der durch das Cookie erzeugten und auf die Webseitennutzung durch den betreffenden Nutzer bezogenen Daten (inkl. der IP-Adresse) an Google sowie die Bearbeitung dieser Daten durch Google verhindern, indem die Nutzer das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren: http://tools.google.com/dlpage/gaoptout?hl=de.\nAlternativ zum Browser-Plugin können Nutzer diesen Link klicken, um die Erfassung durch Google Analytics auf der Webseite zukünftig zu verhindern. Dabei wird ein Opt-Out-Cookie auf dem Endgerät des Nutzers abgelegt. Löschen die Nutzer Cookies (siehe dazu Ziffer 5.2 Cookies), muss der Link erneut geklickt werden."
+          {
+            "text": "Abweichend von der Beschreibung in Ziffer 5.3.1 werden in Google Analytics (in der hier verwendeten Version \"Google Analytics 4\") IP-Adressen nicht protokolliert oder gespeichert. Bei aus der EU stammenden Zugriffen werden IP-Adressdaten nur zur Ableitung von Standortdaten verwendet und danach sofort gelöscht. Bei der Erhebung von Messdaten in Google Analytics erfolgen alle IP-Suchen auf EU-basierten Servern, bevor der Traffic zur Bearbeitung auf Analytics-Server weitergeleitet wird. In Google Analytics werden regionale Rechenzentren genutzt. Wird in Google Analytics eine Verbindung zum nächstgelegenen verfügbaren Rechenzentrum von Google hergestellt, werden die Messdaten über eine verschlüsselte HTTPS-Verbindung an Analytics gesendet. In diesen Zentren werden die Daten weiter verschlüsselt, bevor sie an die Bearbeitungsserver von Analytics weitergeleitet und auf der Plattform verfügbar gemacht werden. Anhand der IP-Adressen wird das das am besten geeignete lokale Rechenzentrum ermittelt. Hierbei kann es auch zu einer Datenübermittlung an Server im Ausland, z.B. den USA, kommen (vgl. dazu, insb. zum Fehlen eines angemessenen Datenschutzniveaus und zu den vorgesehenen Garantien, Ziffer 4.2)."
+          },
+          {
+            "text": "Dabei nutzen wir auch die technische Erweiterung „Google Signals\", die ein Cross Device Tracking – also ein endgerätübergreifendes Tracking- ermöglicht. Damit kann eine Zuordnung eines einzelnen Webseitenbesuchers mit verschiedenen Endgeräten hergestellt werden. Dies geschieht jedoch nur dann, wenn der Besucher sich bei den Webseitenbesuchen in einen Google-Dienst eingeloggt hat und zugleich in seinen Google-Konto-Einstellungen die Option „personalisierte Werbung\" aktiviert hat. Auch dann werden uns aber keine personenbezogenen Daten oder Nutzerprofile zugänglich; sie bleiben für uns anonym. Wenn Sie die Nutzung von „Google Signals\" nicht wünschen, können Sie in Ihren Google-Konto-Einstellungen die Option „personalisierte Werbung\" deaktivieren."
+          },
+          [
+            {
+              "text": "Nutzer können die Erfassung der durch das Cookie erzeugten und auf die Webseitennutzung durch den betreffenden Nutzer bezogenen Daten (inkl. der IP-Adresse) an Google sowie die Bearbeitung dieser Daten durch Google verhindern, indem die Nutzer das unter dem folgenden Link verfügbare Browser-Plugin herunterladen und installieren: "
+            },
+            {
+              "text": "Google Tools Webseite",
+              "link": "http://tools.google.com/dlpage/gaoptout?hl=de"
+            },
+            {
+              "text": ". Alternativ zum Browser-Plugin können Nutzer diesen Link klicken, um die Erfassung durch Google Analytics auf der Webseite zukünftig zu verhindern. Dabei wird ein Opt-Out-Cookie auf dem Endgerät des Nutzers abgelegt. Löschen die Nutzer Cookies (siehe dazu Ziffer 5.2 Cookies), muss der Link erneut geklickt werden."
+            }
+          ]
         ]
       },
       "3": {
@@ -188,7 +222,15 @@
           "Wir nutzen den Webanalyse-Dienst Google Web Fonts von Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA. (Google Web Fonts). Dabei können die beschriebenen Daten über die Benutzung der Webseite zu den erläuterten Bearbeitungszwecken (siehe Ziffer 4) an die Server von Google in USA übermittelt werden."
         ],
         "additional_information": [
-          "Nutzer können die Erfassung der durch das Cookie erzeugten und auf die Webseitennutzung durch den betreffenden Nutzer bezogenen Daten (inkl. der IP-Adresse) an Google sowie die Bearbeitung dieser Daten durch Google verhindern, indem sie den folgenden Link anklicken und die Instruktionen befolgen: https://policies.google.com/privacy?hl=de&gl=de"
+          [
+            {
+              "text": "Nutzer können die Erfassung der durch das Cookie erzeugten und auf die Webseitennutzung durch den betreffenden Nutzer bezogenen Daten (inkl. der IP-Adresse) an Google sowie die Bearbeitung dieser Daten durch Google verhindern, indem sie den folgenden Link anklicken und die Instruktionen befolgen: "
+            },
+            {
+              "text": "Google Policy Webseite",
+              "link": "https://policies.google.com/privacy?hl=de&gl=de"
+            }
+          ]
         ]
       },
       "4": {
@@ -197,7 +239,15 @@
           "Wir nutzen den Webanalyse-Dienst YouTube LLC, 901 Cherry Ave., San Bruno, CA 94066, USA (YouTube). Dabei können die beschriebenen Daten über die Benutzung der Webseite zu den erläuterten Bearbeitungszwecken (siehe Ziffer 4) an die Server von YouTube in USA übermittelt werden."
         ],
         "additional_information": [
-          "Nutzer können die Erfassung der durch das Cookie erzeugten und auf die Webseitennutzung durch den betreffenden Nutzer bezogenen Daten (inkl. der IP-Adresse) an YouTube sowie die Bearbeitung dieser Daten durch YouTube verhindern, indem sie den folgenden Link anklicken und die Instruktionen befolgen: https://policies.google.com/privacy?hl=de&gl=de"
+          [
+            {
+              "text": "Nutzer können die Erfassung der durch das Cookie erzeugten und auf die Webseitennutzung durch den betreffenden Nutzer bezogenen Daten (inkl. der IP-Adresse) an YouTube sowie die Bearbeitung dieser Daten durch YouTube verhindern, indem sie den folgenden Link anklicken und die Instruktionen befolgen: "
+            },
+            {
+              "text": "Google Policy Webseite",
+              "link": "https://policies.google.com/privacy?hl=de&gl=de"
+            }
+          ]
         ]
       }
     },
@@ -209,7 +259,15 @@
           "Auf unserer Webseite haben wir Links zu unseren Profilen in den sozialen Netzwerken fol-gender Anbieter eingebaut:"
         ],
         "list": [
-          "Meta Platforms Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dub-lin 2, Irland, Datenschutzhinweise"
+          [
+            {
+              "text": "Meta Platforms Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland, "
+            },
+            {
+              "text": "Datenschutzhinweise",
+              "link": "https://www.facebook.com/privacy/policy/?entry_point=data_policy_redirect&entry=0"
+            }
+          ]
         ],
         "additional_information": [
           "Wenn Sie auf die Icons der sozialen Netzwerke klicken, werden Sie automatisch zu unserem Profil in dem jeweiligen Netzwerk weitergeleitet. Dabei wird eine direkte Verbindung zwischen Ihrem Browser und dem Server des jeweiligen sozialen Netzwerks hergestellt. Dadurch erhält das Netzwerk die Information, dass Sie mit Ihrer IP-Adresse unsere Webseite besucht und den Link angeklickt haben. Hierbei kann es auch zu einer Datenübermittlung an Server im Ausland, z.B. den USA, kommen (vgl. dazu, insb. zum Fehlen eines angemessenen Datenschutzniveaus und zu den vorgesehenen Garantien, Ziffer 4.2 und 4.3).",
@@ -222,7 +280,15 @@
           "Auf unserer Webseite können Sie Social Media Plugins der nachfolgend aufgeführten Anbieter verwenden:"
         ],
         "list": [
-          "Meta Platforms Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dub-lin 2, Irland, Datenschutzhinweise;"
+          [
+            {
+              "text": "Meta Platforms Ireland Limited, 4 Grand Canal Square, Grand Canal Harbour, Dublin 2, Irland, "
+            },
+            {
+              "text": "Datenschutzhinweise",
+              "link": "https://www.facebook.com/privacy/policy/?entry_point=data_policy_redirect&entry=0"
+            }
+          ]
         ],
         "additional_information": [
           "Wir verwenden die Social Media Plugins, um Ihnen das Teilen von Inhalten aus unserer Webseite zu erleichtern. Die Social Media Plugins helfen uns, die Wahrnehmbarkeit unserer Inhalte in den sozialen Netzwerken zu erhöhen und tragen insofern zur besseren Vermarktung bei.",
@@ -263,7 +329,15 @@
       "Beschwerderecht: Sie haben das Recht, bei einer zuständigen Aufsichtsbehörde, z.B. gegen die Art und Weise der Bearbeitung Ihrer personenbezogenen Daten, Beschwerde einzureichen."
     ],
     "additional_information_2": [
-      "Zur Ausübung dieser Rechte senden Sie uns bitte eine E-Mail an folgende Adresse: verwaltung@centerio.ch"
+      [
+        {
+          "text": "Zur Ausübung dieser Rechte senden Sie uns bitte eine E-Mail an folgende Adresse: "
+        },
+        {
+          "text": "verwaltung@centerio.ch",
+          "link": "mailto:verwaltung@centerio.ch"
+        }
+      ]
     ]
   }
 }

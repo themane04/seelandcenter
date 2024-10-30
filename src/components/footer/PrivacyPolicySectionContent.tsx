@@ -27,7 +27,7 @@ const PrivacyPolicySectionContent = ({
             )}
             {data.list && Array.isArray(data.list) && (
                 <Box mt={3} ml={4} pl={2} borderLeft="2px solid rgba(50, 188, 241, 0.5)" fontSize="1.1rem">
-                    {renderContentWithLinks(data.list)}
+                    {renderContentWithLinks(data.list, true)}
                 </Box>
             )}
             {data.additional_information_2 && Array.isArray(data.additional_information_2) && (

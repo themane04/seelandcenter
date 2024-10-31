@@ -1,6 +1,7 @@
 import {Box, HStack, Text, useMediaQuery, VStack} from "@chakra-ui/react";
 import imprintData from "../assets/footer/imprint.json";
 import ImprintContent from "../components/footer/ImprintContent.tsx";
+import {gradientTitle} from "../style/ts/Common.style.ts";
 
 const Imprint = () => {
     const [is650px] = useMediaQuery("(max-width: 650px)");
@@ -14,14 +15,7 @@ const Imprint = () => {
                 spacing={10}
                 className={"footer-section-distance navbar-section-distsance"}
             >
-                <Text
-                    fontWeight={"bold"}
-                    fontSize={is650px ? "2rem" : "4rem"}
-                    mb={5}
-                    bgGradient="linear(0deg, rgba(4, 42, 158, 0.6) 4%, #FFFFFF 50%)"
-                    bgClip="text"
-                    textTransform={"uppercase"}
-                >
+                <Text sx={gradientTitle(is650px)}>
                     Impressum
                 </Text>
                 <Box

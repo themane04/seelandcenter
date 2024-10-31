@@ -6,6 +6,7 @@ import BusinessDetail from "../pages/BusinessDetail.tsx";
 import Events from "../pages/Events.tsx";
 import RentalSpace from "../pages/RentalSpace.tsx";
 import TravelAndParking from "../pages/TravelAndParking.tsx";
+import CenterInfo from "../pages/CenterInfo.tsx";
 
 export const useRouteService = () => {
     const routes: IRoutes[] = [
@@ -43,7 +44,12 @@ export const useRouteService = () => {
             path: "/travel-and-parking",
             name: "Travel and Parking",
             element: TravelAndParking
-        }
+        },
+        {
+            path: "/center-info",
+            name: "Center Info",
+            element: CenterInfo
+        },
     ]
 
     return routes;

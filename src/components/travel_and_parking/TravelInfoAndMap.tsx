@@ -1,6 +1,7 @@
 import {Box, Table, Tbody, Td, Text, Th, Thead, Tr, useMediaQuery} from "@chakra-ui/react";
-import {tableHeader, underTitle} from "../../style/ts/TravelAndParking.style.ts";
+import {tableHeader} from "../../style/ts/TravelAndParking.style.ts";
 import locationData from "../../assets/travel_and_parking/location.json";
+import {underTitle} from "../../style/ts/Common.style.ts";
 
 const TravelInfoAndMap = () => {
     const [is900px] = useMediaQuery("(max-width: 900px)");

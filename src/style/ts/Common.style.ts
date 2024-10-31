@@ -4,5 +4,13 @@ export const gradientTitle = (is650px: boolean) => ({
     textTransform: "uppercase",
     mb: 5,
     fontSize: is650px ? "2rem" : "4rem",
-    fontWeight: "bold"
+    fontWeight: "bold",
+    textAlign: "center",
 });
+
+export const underTitle = {
+    fontSize: "1.3rem",
+    color: "rgba(50, 188, 241, 1)",
+    mt: 5,
+    textTransform: "uppercase",
+};

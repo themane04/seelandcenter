@@ -32,7 +32,7 @@ const NavbarLinks = ({
             </Link>
             <Link sx={navbarLinksStyle}>Öffnungszeiten</Link>
             <Link sx={navbarLinksStyle}>Aktuelles</Link>
-            <Link sx={navbarLinksStyle}>Centerinfo</Link>
+            <Link sx={navbarLinksStyle} onClick={() => navigate("/center-info")}>Centerinfo</Link>
             <Link sx={navbarLinksStyle} onClick={() => navigate("/travel-and-parking")}>Anreise & Parking</Link>
         </>
     );

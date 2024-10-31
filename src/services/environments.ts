@@ -1,3 +1,3 @@
 export const environments = {
-    imageChangeCooldown: 10000,
+    imageChangeCooldown: 7000,
 }

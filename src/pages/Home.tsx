@@ -8,19 +8,14 @@ import {environments} from "../services/environments.ts";
 
 const Home = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(4);
-    const [isTransitioning, setIsTransitioning] = useState(false);
-    const nextImageIndex = (currentImageIndex + 1) % imageData.length;
 
     useEffect(() => {
-        const intervalId = setInterval(() => {
-            setIsTransitioning(true);
-            setTimeout(() => {
-                setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imageData.length);
-                setIsTransitioning(false);
-            }, 1000);
+        const interval = setInterval(() => {
+            setCurrentImageIndex(prevIndex => (prevIndex + 1) % imageData.length);
         }, environments.imageChangeCooldown);
-        return () => clearInterval(intervalId);
-    }, [imageData.length]);
+
+        return () => clearInterval(interval);
+    }, []);
 
     const handleDotClick = (index: number) => {
         setCurrentImageIndex(index);
@@ -30,8 +25,16 @@ const Home = () => {
         <>
             <section id="home"/>
             <Box height="100vh">
-                <Box sx={imageBoxStyle(imageData[currentImageIndex].path, !isTransitioning, true)}/>
-                <Box sx={imageBoxStyle(imageData[nextImageIndex].path, isTransitioning, false)}/>
+                {imageData.map((image, index) => (
+                    <Box
+                        key={image.id}
+                        sx={{
+                            ...imageBoxStyle(image.path),
+                            opacity: index === currentImageIndex ? 1 : 0,
+                            transition: 'opacity 1s ease-in-out'
+                        }}
+                    />
+                ))}
                 <SocialMediaBanner
                     imageData={imageData}
                     currentImageIndex={currentImageIndex}

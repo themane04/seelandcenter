@@ -29,7 +29,7 @@ const Business = () => {
                     maxH={"600px"}
                     position="absolute"
                     zIndex={0}
-                    top="280"
+                    top="15vw"
                     left="0"
                 />
                 <Box zIndex={2}>

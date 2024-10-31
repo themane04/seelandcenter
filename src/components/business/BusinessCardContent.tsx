@@ -5,10 +5,6 @@ import {useNavigate} from "react-router-dom";
 const BusinessCardContent = ({business}: IBusinessCardContent) => {
     const navigate = useNavigate();
 
-    const handleNavigateToBusiness = () => {
-        navigate(`/business/${business.url}`);
-    }
-
     return (
         <>
             <Box
@@ -28,7 +24,7 @@ const BusinessCardContent = ({business}: IBusinessCardContent) => {
                     transition: "all 0.4s ease-in-out",
                 }}
                 cursor={"pointer"}
-                onClick={handleNavigateToBusiness}
+                onClick={() => navigate(`/business/${business.url}`)}
             >
                 <Box
                     backgroundImage={`url(${business.banner})`}

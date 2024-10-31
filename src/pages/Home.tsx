@@ -4,6 +4,7 @@ import imageData from "../assets/home/images.json";
 import {imageBoxStyle} from "../style/ts/Home.style.ts";
 import SocialMediaBanner from "../components/home/SocialMediaBanner.tsx";
 import Business from "../sections/Business.tsx";
+import {environments} from "../services/environments.ts";
 
 const Home = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(4);
@@ -17,7 +18,7 @@ const Home = () => {
                 setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imageData.length);
                 setIsTransitioning(false);
             }, 1000);
-        }, 12000);
+        }, environments.imageChangeCooldown);
         return () => clearInterval(intervalId);
     }, [imageData.length]);
 

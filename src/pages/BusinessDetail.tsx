@@ -2,6 +2,7 @@ import {Box, Flex, Heading, Text, Link, Image, Button, HStack} from "@chakra-ui/
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import businessData from "../assets/business/businesses.json";
+import {environments} from "../services/environments.ts";
 
 const BusinessDetail = () => {
     const {businessUrl} = useParams<{ businessUrl: string }>();
@@ -11,7 +12,7 @@ const BusinessDetail = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentImage((prevImage) => (prevImage + 1) % business!.images.length);
-        }, 3000);
+        }, environments.imageChangeCooldown);
 
         return () => clearInterval(interval);
     }, [business?.images.length]);
@@ -101,8 +102,8 @@ const BusinessDetail = () => {
                     position="relative"
                     maxW="600px"
                     h="400px"
-                    boxShadow="lg"
-                    borderRadius="md"
+                    boxShadow="rgba(255, 255, 255, 0.5) 0px 0px 30px 0.5px"
+                    borderRadius="10px"
                     overflow="hidden"
                 >
                     <Image
@@ -119,7 +120,7 @@ const BusinessDetail = () => {
                         justify="center"
                         gap={2}
                         p={2}
-                        bg="rgba(0, 0, 0, 0.3)"
+                        display={business.images.length > 1 ? "flex" : "none"}
                     >
                         {business.images.map((_, index) => (
                             <>

@@ -41,7 +41,7 @@ const SocialMediaBanner = ({
                 width="100%"
                 position="absolute"
                 zIndex="1000"
-                top={"20vh"}
+                className={"navbar-section-distsance"}
             >
                 <Flex
                     align="center"

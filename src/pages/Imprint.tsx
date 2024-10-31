@@ -10,10 +10,9 @@ const Imprint = () => {
                 w={"80%"}
                 h={"fit-content"}
                 m={"0 auto"}
-                top={"20vh"}
                 position={"relative"}
                 spacing={10}
-                className={"footer-section-distance"}
+                className={"footer-section-distance navbar-section-distsance"}
             >
                 <Text
                     fontWeight={"bold"}

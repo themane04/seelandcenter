@@ -20,7 +20,11 @@ html, body {
 }
 
 .navbar-section-distsance {
-    margin-top: 200px !important;
+    margin-top: 15vh !important;
+}
+
+.section-section-distance {
+    margin-top: 15vh !important;
 }
 
 .footer-section-distance {

@@ -10,9 +10,9 @@ const PrivacyPolicy = () => {
                 w={"80%"}
                 h={"fit-content"}
                 m={"0 auto"}
-                top={"20vh"}
                 position={"relative"}
                 spacing={10}
+                className={"navbar-section-distsance footer-section-distance"}
             >
                 <Text
                     fontWeight={"bold"}

@@ -35,11 +35,11 @@ const Business = () => {
                 <Box zIndex={2}>
                     <Text
                         textTransform={"uppercase"}
-                        pt={"150px"}
                         mb={"100px"}
                         width={"100%"}
                         textAlign={"center"}
                         ml={"-9vw"}
+                        className={"section-section-distance"}
                     >
                         Geschäfte
                     </Text>

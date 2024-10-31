@@ -4,6 +4,5 @@ export interface IBurgerMenu {
 }
 
 export interface INavbarLinks {
-    onClick?: () => void;
     logo?: boolean;
 }

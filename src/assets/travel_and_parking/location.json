@@ -1,0 +1,30 @@
+{
+  "location_details": {
+    "address": "Bielstrasse 9, 3250 Lyss",
+    "parking": "Im Seelandcenter Lyss stehen den Besuchern insgesamt 200 Parkplätze für 1.5 Std. gratis zur Verfügung.",
+    "public_transport": "Mit Bus bis Haltestelle Hirschenplatz, Lyss",
+    "busTable": [
+      {
+        "bus_number": "362",
+        "direction_1": "Schnottwil, Post",
+        "direction_2": ""
+      },
+      {
+        "bus_number": "363",
+        "direction_1": "Lyss, Bahnhof",
+        "direction_2": "Messen, Dorfplatz"
+      },
+      {
+        "bus_number": "367",
+        "direction_1": "Lyss, Bahnhof",
+        "direction_2": "Lyss, Dreihubel"
+      },
+      {
+        "bus_number": "368",
+        "direction_1": "Lyss, Kornweg",
+        "direction_2": "Lyss, Bahnhof"
+      }
+    ],
+    "station_distance": "Der Bahnhof Lyss ist vier Gehminuten vom Seeland Center entfernt."
+  }
+}

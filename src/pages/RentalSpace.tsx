@@ -1,18 +1,14 @@
-import {Box, Heading, HStack, Text, useMediaQuery, VStack} from "@chakra-ui/react";
+import {Heading, HStack, Text, useMediaQuery, VStack} from "@chakra-ui/react";
 import {gradientTitle} from "../style/ts/Common.style.ts";
 import RentalSpaceImages from "../components/rental_space/RentalSpaceImages.tsx";
+import BoxLayout from "../components/common/BoxLayout.tsx";
 
 const RentalSpace = () => {
     const [is1200px] = useMediaQuery("(max-width: 1200px)");
     const [is650px] = useMediaQuery("(max-width: 650px)");
     return (
         <>
-            <Box
-                flex="1"
-                color={"#FFFFFF"}
-                textAlign={"left"}
-                className={"navbar-section-distsance"}
-            >
+            <BoxLayout>
                 <VStack>
                     <Heading sx={gradientTitle(is650px)}>Freiemietflächen</Heading>
                     <Text
@@ -43,7 +39,7 @@ const RentalSpace = () => {
                         </HStack>
                     )}
                 </VStack>
-            </Box>
+            </BoxLayout>
         </>
     );
 }

@@ -4,7 +4,6 @@ import {INavbarLinks} from "../../interfaces/navbar.interface.ts";
 import {useLocation, useNavigate} from "react-router-dom";
 
 const NavbarLinks = ({
-                         onClick,
                          logo = true
                      }: INavbarLinks) => {
     const location = useLocation();
@@ -31,10 +30,10 @@ const NavbarLinks = ({
                     height={"50px"}
                 />
             </Link>
-            <Link sx={navbarLinksStyle} onClick={onClick}>Öffnungszeiten</Link>
-            <Link sx={navbarLinksStyle} onClick={onClick}>Aktuelles</Link>
-            <Link sx={navbarLinksStyle} onClick={onClick}>Centerinfo</Link>
-            <Link sx={navbarLinksStyle} onClick={onClick}>Anreise & Parking</Link>
+            <Link sx={navbarLinksStyle}>Öffnungszeiten</Link>
+            <Link sx={navbarLinksStyle}>Aktuelles</Link>
+            <Link sx={navbarLinksStyle}>Centerinfo</Link>
+            <Link sx={navbarLinksStyle} onClick={() => navigate("/travel-and-parking")}>Anreise & Parking</Link>
         </>
     );
 }

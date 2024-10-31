@@ -20,7 +20,7 @@ const CenterInfoContent = ({
                     <Text>Bielstrasse 9</Text>
                     <Text>3250 Lyss</Text>
                 </Box>
-                <Box>
+                <Box textAlign={is1073px ? "center" : "right"}>
                     <Text sx={underTitle}>Service</Text>
                     <Text>Behindertengerechtes Center</Text>
                     <Text>Kunden-WC im 1. Obergeschoss</Text>

@@ -4,7 +4,8 @@ import {INavbarLinks} from "../../interfaces/navbar.interface.ts";
 import {useLocation, useNavigate} from "react-router-dom";
 
 const NavbarLinks = ({
-                         logo = true
+                         logo = true,
+                         onClose
                      }: INavbarLinks) => {
     const location = useLocation();
     const navigate = useNavigate();
@@ -15,7 +16,13 @@ const NavbarLinks = ({
         } else {
             navigate("/");
         }
-    }
+        onClose?.();
+    };
+
+    const handleLinkClick = (path: string) => {
+        navigate(path);
+        onClose?.();
+    };
 
     return (
         <>
@@ -32,10 +39,11 @@ const NavbarLinks = ({
             </Link>
             <Link sx={navbarLinksStyle}>Öffnungszeiten</Link>
             <Link sx={navbarLinksStyle}>Aktuelles</Link>
-            <Link sx={navbarLinksStyle} onClick={() => navigate("/center-info")}>Centerinfo</Link>
-            <Link sx={navbarLinksStyle} onClick={() => navigate("/travel-and-parking")}>Anreise & Parking</Link>
+            <Link sx={navbarLinksStyle} onClick={() => handleLinkClick("/center-info")}>Centerinfo</Link>
+            <Link sx={navbarLinksStyle} onClick={() => handleLinkClick("/travel-and-parking")}>Anreise & Parking</Link>
         </>
     );
 }
+
 
 export default NavbarLinks;

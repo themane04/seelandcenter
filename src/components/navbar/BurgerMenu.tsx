@@ -38,7 +38,7 @@ const BurgerMenu = ({isOpen, onClose}: IBurgerMenu) => {
             display="flex"
         >
             <VStack spacing={6} fontSize={["1.5rem", "2rem", "2.5rem", "3rem"]} fontWeight="semibold">
-                <NavbarLinks onClick={onClose}/>
+                <NavbarLinks onClose={onClose}/>
                 <HStack
                     spacing={6}
                     fontSize={["1.5rem", "2rem", "2.5rem", "3rem"]}

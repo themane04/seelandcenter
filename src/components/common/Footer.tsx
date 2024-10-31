@@ -4,7 +4,7 @@ import SeelandSocialsAndNavigation from "../footer/SeelandSocialsAndNavigation.t
 import CenterManagement from "../footer/CenterManagement.tsx";
 
 const Footer = () => {
-    const [is1000px] = useMediaQuery("(max-width: 1000px)");
+    const [is731px] = useMediaQuery("(max-width: 731px)");
     return (
         <>
             <Box
@@ -12,11 +12,13 @@ const Footer = () => {
                 bgColor={"#000000"}
                 width={"100%"}
                 height={"fit-content"}
+                pt={"40px"}
+                pb={"40px"}
                 mt={"100px"}
                 textTransform={"uppercase"}
                 position={"relative"}
             >
-                {is1000px ? (
+                {is731px ? (
                     <VStack
                         width={"100%"}
                         height={"100%"}
@@ -28,7 +30,7 @@ const Footer = () => {
                     >
                         <SeelandSocialsAndNavigation/>
                         <SeelandLocation/>
-                        <CenterManagement pb={"50px"}/>
+                        <CenterManagement/>
                     </VStack>
                 ) : (
                     <HStack
@@ -37,8 +39,6 @@ const Footer = () => {
                         display={"flex"}
                         justifyContent={"space-between"}
                         alignItems={"center"}
-                        spacing={"50px"}
-                        px={"50px"}
                     >
                         <SeelandLocation/>
                         <SeelandSocialsAndNavigation/>

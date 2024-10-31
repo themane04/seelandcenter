@@ -1,11 +1,7 @@
 import {Box, Image, Text, useMediaQuery, VStack} from "@chakra-ui/react";
 import CenterioEmail from "../common/CenterioEmail.tsx";
 
-interface ICenterManagement {
-    pb?: string;
-}
-
-const CenterManagement = ({pb}: ICenterManagement) => {
+const CenterManagement = () => {
     const [is1842px] = useMediaQuery("(max-width: 1842px)");
     return (
         <>
@@ -16,7 +12,6 @@ const CenterManagement = ({pb}: ICenterManagement) => {
                 alignItems={"center"}
                 spacing={"0"}
                 color={"#FFFFFF"}
-                pb={pb}
                 gap={"20px"}
             >
                 <Image

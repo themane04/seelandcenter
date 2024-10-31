@@ -1,4 +1,4 @@
-import {Box, HStack, Link, Text, useMediaQuery, VStack} from "@chakra-ui/react";
+import {Box, Flex, HStack, Link, Text, useMediaQuery, VStack} from "@chakra-ui/react";
 import SocialMediaLinks from "../home/SocialMediaLinks.tsx";
 import NavbarLinks from "../navbar/NavbarLinks.tsx";
 import LogoAndText from "./LogoAndText.tsx";
@@ -13,8 +13,7 @@ const SeelandSocialsAndNavigation = () => {
                 height={"100%"}
                 justifyContent={"center"}
                 alignItems={"center"}
-                spacing={is1842px ? "10" : "0"}
-                pb={"20px"}
+                spacing={is1842px ? "10" : "5"}
             >
                 {!is731px ? (
                     <HStack
@@ -48,18 +47,17 @@ const SeelandSocialsAndNavigation = () => {
                 >
                     <SocialMediaLinks/>
                 </Box>
-                <Box
+                <Flex
                     width={"100%"}
                     height={"100%"}
                     display={"flex"}
                     justifyContent={"center"}
                     alignItems={"center"}
-                    gap={"50px"}
-                    mt={is731px ? "50px" : ""}
-                    flexDirection={is731px ? "column" : "row"}
+                    gap={is731px ? "20px" : "20px"}
+                    wrap={"wrap"}
                 >
                     <NavbarLinks logo={false}/>
-                </Box>
+                </Flex>
                 <HStack height={"100%"}>
                     <Text
                         color={"rgba(50, 188, 241, 0.8)"}

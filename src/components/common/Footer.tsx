@@ -4,25 +4,25 @@ import SeelandSocialsAndNavigation from "../footer/SeelandSocialsAndNavigation.t
 import CenterManagement from "../footer/CenterManagement.tsx";
 
 const Footer = () => {
-    const [is1842px] = useMediaQuery("(max-width: 1842px)");
+    const [is1000px] = useMediaQuery("(max-width: 1000px)");
     return (
         <>
             <Box
                 bg={"#1E1E1E"}
                 bgColor={"#000000"}
                 width={"100%"}
-                height={is1842px ? "fit-content" : "300px"}
+                height={"fit-content"}
                 mt={"100px"}
                 textTransform={"uppercase"}
             >
-                {is1842px ? (
+                {is1000px ? (
                     <VStack
                         width={"100%"}
                         height={"100%"}
                         display={"flex"}
                         justifyContent={"space-between"}
                         alignItems={"center"}
-                        spacing={"50px"}
+                        spacing={"40px"}
                         px={"50px"}
                     >
                         <SeelandSocialsAndNavigation/>

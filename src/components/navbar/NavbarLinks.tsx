@@ -34,7 +34,7 @@ const NavbarLinks = ({
             <Link sx={navbarLinksStyle} onClick={onClick}>Öffnungszeiten</Link>
             <Link sx={navbarLinksStyle} onClick={onClick}>Aktuelles</Link>
             <Link sx={navbarLinksStyle} onClick={onClick}>Centerinfo</Link>
-            <Link sx={navbarLinksStyle} onClick={onClick}>Anreise & Parking</Link>
+            <Link sx={navbarLinksStyle} textAlign={"center"} onClick={onClick}>Anreise & Parking</Link>
         </>
     );
 }

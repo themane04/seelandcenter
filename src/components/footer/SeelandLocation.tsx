@@ -14,17 +14,22 @@ const SeelandLocation = () => {
                 color={"#FFFFFF"}
             >
                 <Box textAlign={is1842px ? "center" : "left"}>
-                    <Text color={"rgba(50, 188, 241, 0.8)"}>Seelandcenter</Text>
+                    <Text color={"rgba(50, 188, 241, 0.8)"}>Seeland Center</Text>
                     <Text>Bielstrasse 9</Text>
                     <Text>3250 Lyss</Text>
                     <Link
                         href="mailto:info@seelandcenter.ch"
                         transition="all 0.4s ease-in-out"
-                        _hover={{textDecoration: "none", transform: "scale(1.1)"}}
+                        _hover={{textDecoration: "none"}}
                     >
                         <Text
                             textTransform="lowercase"
                             color="rgba(50, 188, 241, 0.8)"
+                            transition="all 0.4s ease-in-out"
+                            _hover={{
+                                transform: "scale(1.1)",
+                                transition: "all 0.4s ease-in-out"
+                            }}
                         >
                             info@seelandcenter.ch
                         </Text>

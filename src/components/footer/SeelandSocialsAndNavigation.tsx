@@ -9,11 +9,12 @@ const SeelandSocialsAndNavigation = () => {
     return (
         <>
             <VStack
-                width={"100%"}
+                width={"120%"}
                 height={"100%"}
                 justifyContent={"center"}
                 alignItems={"center"}
                 spacing={is1842px ? "10" : "0"}
+                pb={"20px"}
             >
                 {!is731px ? (
                     <HStack

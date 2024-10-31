@@ -21,3 +21,25 @@ export interface IArrowButton {
     motionMt?: string;
     backgroundColor?: string;
 }
+
+export interface IBusinessDetailImage {
+    business: {
+        name: string;
+        images: string[];
+    };
+    currentImage: number;
+    setCurrentImage: (index: number) => void;
+}
+
+export interface IBusinessDetailContent {
+    name: string;
+    under_title?: string;
+    quote?: string;
+    content?: string;
+    message?: string;
+    phone?: string;
+    website?: string;
+    website_text?: string;
+}
+
+

@@ -13,7 +13,7 @@ const ImageDot = ({
                     key={index}
                     onClick={() => handleDotClick(index)}
                     variant={"ghost"}
-                    _hover={{bg: "none", transform: "scale(1.2)"}}
+                    _hover={{bg: "none", transform: "scale(1.1)"}}
                     width={"fit-content"}
                     height={"fit-content"}
                     padding="10px"

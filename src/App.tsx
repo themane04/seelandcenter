@@ -12,6 +12,10 @@ function App() {
     const [is333px] = useMediaQuery("(max-width: 333px)");
     const routes: IRoutes[] = useRouteService();
 
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js');
+    }
+
     return (
         <ChakraProvider theme={theme}>
             {is333px ? (

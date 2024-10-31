@@ -1,6 +1,6 @@
 import Navbar from "./components/navbar/Navbar.tsx";
 import "./style/css/global.css";
-import {ChakraProvider, useMediaQuery} from "@chakra-ui/react";
+import {Box, ChakraProvider, Flex, useMediaQuery} from "@chakra-ui/react";
 import ScreenSizeLimit from "./components/common/ScreenSizeLimit.tsx";
 import {IRoutes} from "./interfaces/route.interface.ts";
 import {useRouteService} from "./services/route.service.ts";
@@ -17,19 +17,23 @@ function App() {
             {is333px ? (
                 <ScreenSizeLimit/>
             ) : (
-                <BrowserRouter>
-                    <Navbar/>
-                    <Routes>
-                        {routes.map((route) => (
-                            <Route
-                                key={route.path}
-                                path={route.path}
-                                element={<route.element/>}
-                            />
-                        ))}
-                    </Routes>
-                    <Footer/>
-                </BrowserRouter>
+                <Flex direction="column" minHeight="100vh">
+                    <BrowserRouter>
+                        <Navbar/>
+                        <Box flex="1">
+                            <Routes>
+                                {routes.map((route) => (
+                                    <Route
+                                        key={route.path}
+                                        path={route.path}
+                                        element={<route.element/>}
+                                    />
+                                ))}
+                            </Routes>
+                        </Box>
+                        <Footer/>
+                    </BrowserRouter>
+                </Flex>
             )}
         </ChakraProvider>
     );

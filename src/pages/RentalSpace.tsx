@@ -22,10 +22,8 @@ const RentalSpace = () => {
                         mb={10}
                     >
                         In der oberen Verkaufsebene, neben Ankermietern wie JYSK und Qualipet, haben Sie die
-                        Möglichkeit,
-                        Ihre Waren auf einer Verkaufsfläche von 135 m&sup2; zu präsentieren. Die Anlieferung erfolgt
-                        über den
-                        Warenlift.
+                        Möglichkeit, Ihre Waren auf einer Verkaufsfläche von 135 m&sup2; zu präsentieren. Die
+                        Anlieferung erfolgt über den Warenlift.
                     </Text>
                     {is1200px ? (
                         <VStack

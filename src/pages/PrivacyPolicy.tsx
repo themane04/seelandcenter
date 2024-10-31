@@ -1,8 +1,9 @@
-import {Box, Text, VStack} from "@chakra-ui/react";
+import {Box, Text, useMediaQuery, VStack} from "@chakra-ui/react";
 import privacyPolicyData from "../assets/footer/privacy_policy.json";
 import PrivacyPolicySectionContent from "../components/footer/PrivacyPolicySectionContent.tsx";
 
 const PrivacyPolicy = () => {
+    const [is650px] = useMediaQuery("(max-width: 650px)");
     return (
         <>
             <VStack
@@ -10,13 +11,12 @@ const PrivacyPolicy = () => {
                 h={"fit-content"}
                 m={"0 auto"}
                 top={"20vh"}
-                pb={"20vh"}
                 position={"relative"}
                 spacing={10}
             >
                 <Text
                     fontWeight={"bold"}
-                    fontSize={"4rem"}
+                    fontSize={is650px ? "2rem" : "4rem"}
                     mb={5}
                     bgGradient="linear(0deg, rgba(4, 42, 158, 0.6) 4%, #FFFFFF 50%)"
                     bgClip="text"

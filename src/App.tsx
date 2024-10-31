@@ -7,6 +7,7 @@ import {useRouteService} from "./services/route.service.ts";
 import theme from "./config/chakraTheme.ts";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Footer from "./components/common/Footer.tsx";
+import ScrollToTop from "./components/common/ScrollToTop.tsx";
 
 function App() {
     const [is333px] = useMediaQuery("(max-width: 333px)");
@@ -18,6 +19,7 @@ function App() {
                 <ScreenSizeLimit/>
             ) : (
                 <BrowserRouter>
+                    <ScrollToTop/>
                     <Routes>
                         {routes.map((route) => (
                             <Route

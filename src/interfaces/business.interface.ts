@@ -2,6 +2,7 @@ export interface IShortBusiness {
     id: number;
     name: string;
     url: string;
+    banner: string;
     images: string[];
 }
 

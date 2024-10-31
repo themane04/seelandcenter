@@ -18,3 +18,11 @@ html, body {
 .scrollbar-width {
     scrollbar-width: none;
 }
+
+.navbar-section-distsance {
+    margin-top: 200px !important;
+}
+
+.footer-section-distance {
+    margin-bottom: 300px !important;
+}

@@ -12,7 +12,7 @@ const Business = () => {
                 fontWeight={"bold"}
                 lineHeight={"200%"}
                 position="relative"
-                pb={"150px"}
+                className={"footer-section-distance"}
             >
                 <Box
                     backgroundImage={

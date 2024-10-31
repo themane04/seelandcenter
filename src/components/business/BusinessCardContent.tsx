@@ -31,7 +31,7 @@ const BusinessCardContent = ({business}: IBusinessCardContent) => {
                 onClick={handleNavigateToBusiness}
             >
                 <Box
-                    backgroundImage={`url(${business.images[0]})`}
+                    backgroundImage={`url(${business.banner})`}
                     width="100%"
                     height="100%"
                     backgroundSize="cover"

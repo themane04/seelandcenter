@@ -3,8 +3,8 @@
     "id": 0,
     "name": "Denner",
     "url": "denner",
+    "banner": "/business/denner.png",
     "images": [
-      "/business/denner.png",
       "/business/detail_view/denner.jpg"
     ],
     "content": "Profitieren Sie bei Denner von den tiefsten Preisen verbunden mit der höchsten Produktqualität. Unser Sortiment besteht zu 75% aus Markenartikeln, der Rest sind Eigenmarkenprodukte unter der Dachmarke Denner.",
@@ -16,8 +16,8 @@
     "id": 1,
     "name": "Interdiscount",
     "url": "interdiscount",
+    "banner": "/business/inter.png",
     "images": [
-      "/business/inter.png",
       "/business/detail_view/interdiscount.jpg",
       "/business/detail_view/interdiscount-1.jpg"
     ],
@@ -30,8 +30,8 @@
     "id": 2,
     "name": "JYSK",
     "url": "jysk",
+    "banner": "/business/jysk.png",
     "images": [
-      "/business/jysk.png",
       "/business/detail_view/jysk.jpg"
     ],
     "content": "Gutes muss nicht teuer sein. Unsere Möbel und Heimtextilien sind preisgünstig, sofort verfügbar und verbunden mit Beratung und Service. Unsere Filiale verfügt über 4‘000 Artikel.",
@@ -43,8 +43,8 @@
     "id": 3,
     "name": "Kambly",
     "url": "kambly",
+    "banner": "/business/kambly.png",
     "images": [
-      "/business/kambly.png",
       "/business/detail_view/kambly.jpg",
       "/business/detail_view/kambly-1.jpg",
       "/business/detail_view/kambly-2.jpg",
@@ -61,8 +61,8 @@
     "id": 4,
     "name": "Kambly Café",
     "url": "kambly-cafe",
+    "banner": "/business/kambly_cafe.png",
     "images": [
-      "/business/kambly_cafe.png",
       "/business/detail_view/laden_cafe1.jpg",
       "/business/detail_view/laden_cafe2.jpg",
       "/business/detail_view/laden_cafe3.jpg"
@@ -77,8 +77,8 @@
     "id": 5,
     "name": "MTSB",
     "url": "mtsb",
+    "banner": "/business/fight_sports.png",
     "images": [
-      "/business/fight_sports.png",
       "/business/detail_view/g_muai.jpg",
       "/business/detail_view/g_muai2.jpg"
     ],
@@ -90,11 +90,12 @@
     "id": 6,
     "name": "QUALIPET",
     "url": "qualipet",
+    "banner": "/business/qualipet.png",
     "images": [
-      "/business/qualipet.png",
       "/business/detail_view/qualipet.jpg"
     ],
-    "content": "QUALIPET ist der grösste spezialisierte Anbieter von Haustierbedarf in der Schweiz. Ob für Hunde, Katzen, Nager, Vögel oder Fische. Wir bieten für alle Heimtierhalter eine grosse Auswahl an Futter, Spielzeug, Kratzbäumen, Autoboxen, und vielem mehr. Die Heimtierexperten von QUALIPET beraten Sie gerne und freuen sich auf Ihren Besuch.",
+    "content": "QUALIPET ist der grösste spezialisierte Anbieter von Haustierbedarf in der Schweiz. Ob für Hunde, Katzen, Nager, Vögel oder Fische. Wir bieten für alle Heimtierhalter eine grosse Auswahl an Futter, Spielzeug, Kratzbäumen, Autoboxen, und vielem mehr.",
+    "message": "Die Heimtierexperten von QUALIPET beraten Sie gerne und freuen sich auf Ihren Besuch.",
     "phone": "+41 (0)32 384 62 26",
     "website": "www.qualipet.ch",
     "website_text": "Die QUALIPET Website besuchen"
@@ -103,8 +104,8 @@
     "id": 7,
     "name": "Secret Dance",
     "url": "secret-dance",
+    "banner": "/business/secret_dance.png",
     "images": [
-      "/business/secret_dance.png",
       "/business/detail_view/g_secret.jpg"
     ],
     "content": "Wir bieten eine spezielle Art des Unterrichts und Spass an. Ein Freizeitort zum Wohlfühlen und um seine Grenzen zu überschreiten! Wir legen grossen Wert auf hohe Qualität und fördern individuell jeden einzelnen Schüler. Gegenseitiges Wertschätzen und grosse Akzeptanz sind bei uns fester Bestandteil. Unser differenziertes Dienstleistungsportfolio und die professionelle Betreuung bietet somit allen gesundheitsbewussten und bewegungsbegeisterten Menschen etwas Spannendes an. Bei uns sind alle herzlich Willkommen. Von gross bis klein / jung bis alt / für Spitzensportler / für ein Aufbautraining nach Verletzungen oder zur Ergänzung einer Reha-Behandlung und sogar für Menschen mit körperlichen und geistigen Defiziten.\nWir sind an Events, Shows, und Workshops tätig und nehmen an Wettbewerben, Eröffnungen und Werbeauftritten teil. Die Zusammenarbeit mit der in- und ausländischen Tanz- und Fitness-Szene und mit der Jugend-Nachwuchsförderung liegen uns sehr am Herzen. Durch das ganze Jahr bieten wir zahlreiche und spannende Zusatz-Workshops an. Wir wirken auch bei etlichen Firmen- und Vereins-Projekten mit.",
@@ -115,8 +116,8 @@
     "id": 8,
     "name": "Star Hair",
     "url": "star-hair",
+    "banner": "/business/star_hair.png",
     "images": [
-      "/business/star_hair.png",
       "/business/detail_view/g_starhair.jpg"
     ],
     "message": "Wir freuen uns auf Ihren Besuch in unserer Filiale im Seeland Center.",
@@ -126,8 +127,8 @@
     "id": 9,
     "name": "Zebra",
     "url": "zebra",
+    "banner": "/business/zebra_new.png",
     "images": [
-      "/business/zebra_new.png",
       "/business/detail_view/zebra.jpg",
       "/business/detail_view/zebra-1.jpg"
     ],

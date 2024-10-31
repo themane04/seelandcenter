@@ -1,13 +1,13 @@
 [
   {
     "id": 3,
-    "name": "Events",
-    "url": "events"
+    "name": "Mietflächen",
+    "url": "/rental-spaces"
   },
   {
     "id": 2,
-    "name": "JYSK",
-    "url": "/business/jysk"
+    "name": "Events",
+    "url": "events"
   },
   {
     "id": 1,

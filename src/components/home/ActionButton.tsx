@@ -1,4 +1,4 @@
-import {Box, HStack, Image, Text, useMediaQuery} from "@chakra-ui/react";
+import {Box, Flex, HStack, Image, Text, useMediaQuery} from "@chakra-ui/react";
 import {GoMegaphone} from "react-icons/go";
 import {IButton} from "../../interfaces/home.interface.ts";
 import {useNavigate} from "react-router-dom";
@@ -31,12 +31,17 @@ const ActionButton = ({
                 cursor={"pointer"}
                 onClick={() => navigate(url)}
             >
-                <HStack spacing="10px" align="center" justify="center" letterSpacing="0.24em">
+                <Flex
+                    gap="10px"
+                    align="center"
+                    justify="center"
+                    letterSpacing="0.24em"
+                    textTransform="uppercase"
+                    fontSize={"1.125rem"}
+                >
                     <GoMegaphone size="30px" color="#32BCF1"/>
-                    <Text textTransform="uppercase" fontSize="1.125rem">
-                        {name}
-                    </Text>
-                </HStack>
+                    <Text>{name}</Text>
+                </Flex>
                 <HStack
                     fontWeight="light"
                     letterSpacing="0.1em"

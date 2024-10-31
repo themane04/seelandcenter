@@ -4,6 +4,7 @@ import PrivacyPolicy from "../pages/PrivacyPolicy.tsx";
 import Home from "../pages/Home.tsx";
 import BusinessDetail from "../pages/BusinessDetail.tsx";
 import Events from "../pages/Events.tsx";
+import RentalSpace from "../pages/RentalSpace.tsx";
 
 export const useRouteService = () => {
     const routes: IRoutes[] = [
@@ -31,6 +32,11 @@ export const useRouteService = () => {
             path: "/events",
             name: "Events",
             element: Events
+        },
+        {
+            path: "/rental-spaces",
+            name: "Rental Space",
+            element: RentalSpace
         }
     ]
 

@@ -1,5 +1,5 @@
 import {Box, Flex, HStack, Text, useMediaQuery, VStack} from "@chakra-ui/react";
-import {ISocialMediaBanner} from "../../interfaces/home.interface.ts";
+import {IButton, ISocialMediaBanner} from "../../interfaces/home.interface.ts";
 import buttonData from "../../assets/home/action_buttons.json";
 import SocialMediaLinks from "./SocialMediaLinks.tsx";
 import {useEffect, useRef} from "react";
@@ -108,11 +108,12 @@ const SocialMediaBanner = ({
                         padding="30px"
                         gap={is880px ? "" : "30px"}
                     >
-                        {buttonData.map((button) => (
+                        {buttonData.map((button: IButton) => (
                             <ActionButton
                                 key={button.id}
                                 id={button.id}
                                 name={button.name}
+                                url={button.url}
                             />
                         ))}
                     </Box>

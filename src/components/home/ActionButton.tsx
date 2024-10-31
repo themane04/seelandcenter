@@ -1,12 +1,15 @@
 import {Box, HStack, Image, Text, useMediaQuery} from "@chakra-ui/react";
 import {GoMegaphone} from "react-icons/go";
 import {IButton} from "../../interfaces/home.interface.ts";
+import {useNavigate} from "react-router-dom";
 
 const ActionButton = ({
                           id,
                           name,
+                          url
                       }: IButton) => {
     const [is880px] = useMediaQuery("(max-width: 880px)");
+    const navigate = useNavigate();
     return (
         <>
             <Box
@@ -24,8 +27,9 @@ const ActionButton = ({
                 ml={is880px ? "40px" : ""}
                 mr={is880px ? "40px" : ""}
                 transition="all 0.4s ease-in-out"
-                _hover={{ transform: "scale(1.1)"}}
+                _hover={{transform: "scale(1.1)"}}
                 cursor={"pointer"}
+                onClick={() => navigate(url)}
             >
                 <HStack spacing="10px" align="center" justify="center" letterSpacing="0.24em">
                     <GoMegaphone size="30px" color="#32BCF1"/>

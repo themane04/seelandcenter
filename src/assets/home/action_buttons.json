@@ -1,14 +1,17 @@
 [
   {
     "id": 3,
-    "name": "Events"
+    "name": "Events",
+    "url": "events"
   },
   {
     "id": 2,
-    "name": "JYSK"
+    "name": "JYSK",
+    "url": "/business/jysk"
   },
   {
     "id": 1,
-    "name": "Kambly"
+    "name": "Kambly",
+    "url": "/business/kambly"
   }
 ]

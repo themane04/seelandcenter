@@ -18,4 +18,5 @@ export interface IImage {
 export interface IButton {
     id: number;
     name: string;
+    url: string;
 }

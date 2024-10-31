@@ -1,11 +1,12 @@
-export interface IBusiness {
+export interface IShortBusiness {
     id: number;
     name: string;
-    image_path: string;
+    url: string;
+    images: string[];
 }
 
 export interface IBusinessCardContent {
-    business: IBusiness;
+    business: IShortBusiness;
 }
 
 export interface IArrowButton {

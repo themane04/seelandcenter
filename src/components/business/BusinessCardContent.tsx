@@ -1,7 +1,14 @@
 import {Box, HStack, Image, Text, VStack} from "@chakra-ui/react";
 import {IBusinessCardContent} from "../../interfaces/business.interface.ts";
+import {useNavigate} from "react-router-dom";
 
 const BusinessCardContent = ({business}: IBusinessCardContent) => {
+    const navigate = useNavigate();
+
+    const handleNavigateToBusiness = () => {
+        navigate(`/business/${business.url}`);
+    }
+
     return (
         <>
             <Box
@@ -21,9 +28,10 @@ const BusinessCardContent = ({business}: IBusinessCardContent) => {
                     transition: "all 0.4s ease-in-out",
                 }}
                 cursor={"pointer"}
+                onClick={handleNavigateToBusiness}
             >
                 <Box
-                    backgroundImage={`url(${business.image_path})`}
+                    backgroundImage={`url(${business.images[0]})`}
                     width="100%"
                     height="100%"
                     backgroundSize="cover"

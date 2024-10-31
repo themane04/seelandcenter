@@ -7,7 +7,7 @@ export interface ISocialMediaBanner {
 export interface IImageDot {
     currentImageIndex: number;
     handleDotClick: (index: number) => void;
-    imageData: IImage[];
+    imageData: IImage[] | string[];
 }
 
 export interface IImage {

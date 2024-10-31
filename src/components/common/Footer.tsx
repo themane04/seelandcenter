@@ -14,6 +14,7 @@ const Footer = () => {
                 height={"fit-content"}
                 mt={"100px"}
                 textTransform={"uppercase"}
+                position={"relative"}
             >
                 {is1000px ? (
                     <VStack

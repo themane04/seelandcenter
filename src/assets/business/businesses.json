@@ -2,51 +2,139 @@
   {
     "id": 0,
     "name": "Denner",
-    "image_path": "/business/denner.png"
+    "url": "denner",
+    "images": [
+      "/business/denner.png",
+      "/business/detail_view/denner.jpg"
+    ],
+    "content": "Profitieren Sie bei Denner von den tiefsten Preisen verbunden mit der höchsten Produktqualität. Unser Sortiment besteht zu 75% aus Markenartikeln, der Rest sind Eigenmarkenprodukte unter der Dachmarke Denner.",
+    "phone": "+41 (0)58 999 05 35",
+    "website": "www.denner.ch",
+    "website_text": "Die Denner Website besuchen"
   },
   {
     "id": 1,
     "name": "Interdiscount",
-    "image_path": "/business/inter.png"
+    "url": "interdiscount",
+    "images": [
+      "/business/inter.png",
+      "/business/detail_view/interdiscount.jpg",
+      "/business/detail_view/interdiscount-1.jpg"
+    ],
+    "content": "Die Nr. 1 der Schweiz im Bereich Heimelektronik ist auch im Seelandcenter Lyss für Sie da. Die neusten Produkte aus allen Bereichen der Heim-und Unterhaltungselektronik werden bei uns offen präsentiert. Und kennen Sie schon unsere attraktiven Dienstleistungen und unser bestellbares Sortiment von über 100‘000 Artikeln? Ihr Verkaufsteam berät Sie gerne.",
+    "phone": "+41 (0)32 386 10 11",
+    "website": "www.interdiscount.ch",
+    "website_text": "Die Interdiscount Website besuchen"
   },
   {
     "id": 2,
     "name": "JYSK",
-    "image_path": "/business/jysk.png"
+    "url": "jysk",
+    "images": [
+      "/business/jysk.png",
+      "/business/detail_view/jysk.jpg"
+    ],
+    "content": "Gutes muss nicht teuer sein. Unsere Möbel und Heimtextilien sind preisgünstig, sofort verfügbar und verbunden mit Beratung und Service. Unsere Filiale verfügt über 4‘000 Artikel.",
+    "phone": "+41(0)32 387 09 00",
+    "website": "www.jysk.ch",
+    "website_text": "Die JYSK Website besuchen"
   },
   {
     "id": 3,
     "name": "Kambly",
-    "image_path": "/business/kambly.png"
+    "url": "kambly",
+    "images": [
+      "/business/kambly.png",
+      "/business/detail_view/kambly.jpg",
+      "/business/detail_view/kambly-1.jpg",
+      "/business/detail_view/kambly-2.jpg",
+      "/business/detail_view/kambly-3.jpg"
+    ],
+    "under_title": "Kambly Fabrikladen",
+    "quote": "Kambly – ein Stück Lebensqualität",
+    "content": "Im Kambly Fabrikladen in Lyss finden Sie eine vielfältige Auswahl an Kambly Spezialitäten. Bereiten Sie Momente der Freude mit den exklusiven Kambly Geschenkangeboten und degustieren Sie die Kambly Biscuits nach Herzenslust.",
+    "phone": "+41 (0)32 387 70 22",
+    "website": "www.kambly.com",
+    "website_text": "Die Kambly Website besuchen"
   },
   {
     "id": 4,
     "name": "Kambly Café",
-    "image_path": "/business/kambly_cafe.png"
+    "url": "kambly-cafe",
+    "images": [
+      "/business/kambly_cafe.png",
+      "/business/detail_view/laden_cafe1.jpg",
+      "/business/detail_view/laden_cafe2.jpg",
+      "/business/detail_view/laden_cafe3.jpg"
+    ],
+    "content": "Geniessen Sie im Kambly Café eine Tasse Kaffee, einen auserlesenen Tee oder ein kaltes Getränk. Dazu servieren wir Ihnen gerne feine Früchte- und Gemüsekuchen, Nidlekuchen sowie Sandwiches, Gipfeli oder Brötchen. Bis im März bieten wir jeweils am Freitag eine hausgemachte, frische Suppe an.",
+    "message": "Wir freuen uns auf Ihren Besuch!",
+    "phone": "+41 (0)32 387 70 22",
+    "website": "www.kambly.com",
+    "website_text": "Die Kambly Website besuchen"
   },
   {
     "id": 5,
-    "name": "Fight Sports",
-    "image_path": "/business/fight_sports.png"
+    "name": "MTSB",
+    "url": "mtsb",
+    "images": [
+      "/business/fight_sports.png",
+      "/business/detail_view/g_muai.jpg",
+      "/business/detail_view/g_muai2.jpg"
+    ],
+    "content": "Das die Menschen die Notwendigkeit von Bewegung im Leben einsehen. Das Sport den Geist befreit und zu neuer Lebensenergie führt. Das Werte wie „ Respekt, Ehrlichkeit und durchhalte Wille, durch unsere Tätigkeit,\ngestärkt geschult und wieder an höherem Wert erlangen.\nWir setzen uns für Kampfsport ein ja dass stimmt, aber für Kampfsport der für Jedermann eine Nutzen trägt.\nAuch soll der Kampfsport einen besseren Ruf erhalten, einen Ruf der diesem würdig ist.\nDisziplin, mentale Stärke sowie Regelmäßigkeit ist nur ein kleiner Teil davon was solche Sportarten\nim Grundgedanken mitführen.\n\nUnser Unternehmen hat sich „ one Team one Family\" auf die Brust geschrieben. Zusammenhalt für\neinander da sein, ist eine verloren gegangene Tugend welche wir wieder zu aktivieren versuchen.\nJedem eine Chance geben und Höchstleistungen aus ihm/ihr raus holen sind unsere Kernkompetenzen.\nPhysisch und mental ein Gleichgewicht erarbeiten und langfristig der Gesundheit positiven Schub verleihen\nsind uns ebenfalls sehr wichtig.\n\nIst man jung, alt oder dünn, dick sucht man allgemeine Fitness oder möchte man am Wettkampf seine\nLeistungen messen? Muay Thai Shaodw Boxing bietet für jeden was.\nWir setzen trotz hartem Training sehr viel auf persönliche Betreuung, es sollen sich unsere\nKunden/Schüler wohl fühlen damit wir als große Familie zusammen wachsen und jeder für den anderen da ist.\nNur so egal wo auf der Welt sind Menschen zu großen Leistungen fähig gewesen.",
+    "website": "www.mtsb.ch",
+    "website_text": "Die MTSB Webseite besuchen"
   },
   {
     "id": 6,
     "name": "QUALIPET",
-    "image_path": "/business/qualipet.png"
+    "url": "qualipet",
+    "images": [
+      "/business/qualipet.png",
+      "/business/detail_view/qualipet.jpg"
+    ],
+    "content": "QUALIPET ist der grösste spezialisierte Anbieter von Haustierbedarf in der Schweiz. Ob für Hunde, Katzen, Nager, Vögel oder Fische. Wir bieten für alle Heimtierhalter eine grosse Auswahl an Futter, Spielzeug, Kratzbäumen, Autoboxen, und vielem mehr. Die Heimtierexperten von QUALIPET beraten Sie gerne und freuen sich auf Ihren Besuch.",
+    "phone": "+41 (0)32 384 62 26",
+    "website": "www.qualipet.ch",
+    "website_text": "Die QUALIPET Website besuchen"
   },
   {
     "id": 7,
     "name": "Secret Dance",
-    "image_path": "/business/secret_dance.png"
+    "url": "secret-dance",
+    "images": [
+      "/business/secret_dance.png",
+      "/business/detail_view/g_secret.jpg"
+    ],
+    "content": "Wir bieten eine spezielle Art des Unterrichts und Spass an. Ein Freizeitort zum Wohlfühlen und um seine Grenzen zu überschreiten! Wir legen grossen Wert auf hohe Qualität und fördern individuell jeden einzelnen Schüler. Gegenseitiges Wertschätzen und grosse Akzeptanz sind bei uns fester Bestandteil. Unser differenziertes Dienstleistungsportfolio und die professionelle Betreuung bietet somit allen gesundheitsbewussten und bewegungsbegeisterten Menschen etwas Spannendes an. Bei uns sind alle herzlich Willkommen. Von gross bis klein / jung bis alt / für Spitzensportler / für ein Aufbautraining nach Verletzungen oder zur Ergänzung einer Reha-Behandlung und sogar für Menschen mit körperlichen und geistigen Defiziten.\nWir sind an Events, Shows, und Workshops tätig und nehmen an Wettbewerben, Eröffnungen und Werbeauftritten teil. Die Zusammenarbeit mit der in- und ausländischen Tanz- und Fitness-Szene und mit der Jugend-Nachwuchsförderung liegen uns sehr am Herzen. Durch das ganze Jahr bieten wir zahlreiche und spannende Zusatz-Workshops an. Wir wirken auch bei etlichen Firmen- und Vereins-Projekten mit.",
+    "website": "www.secretdance.ch",
+    "website_text": "Die Secret Dance Website besuchen"
   },
   {
     "id": 8,
     "name": "Star Hair",
-    "image_path": "/business/star_hair.png"
+    "url": "star-hair",
+    "images": [
+      "/business/star_hair.png",
+      "/business/detail_view/g_starhair.jpg"
+    ],
+    "message": "Wir freuen uns auf Ihren Besuch in unserer Filiale im Seeland Center.",
+    "phone": "+41 (0)32 525 71 74"
   },
   {
     "id": 9,
     "name": "Zebra",
-    "image_path": "/business/zebra_new.png"
+    "url": "zebra",
+    "images": [
+      "/business/zebra_new.png",
+      "/business/detail_view/zebra.jpg",
+      "/business/detail_view/zebra-1.jpg"
+    ],
+    "quote": "Zebra – I feel like a star",
+    "content": "Sich nicht nur wie ein Star fühlen, sondern auch entsprechend kleiden, kann man sich mit den stylischen Outfits und Accessoires von Zebra. Im Zebra Store findest du Young Fashion Mode zu günstigen Preisen für trendbewusste, urbane Leute, die immer am Puls der Zeit leben. Unser Brand ist stark feminin und sexy positioniert und strahlt grosse Lebensfreude und eine positive Lebenseinstellung aus.",
+    "phone": "+41 (0)32 384 44 40",
+    "website": "www.zebrafashion.com",
+    "website_text": "Die Zebra Website besuchen"
   }
 ]

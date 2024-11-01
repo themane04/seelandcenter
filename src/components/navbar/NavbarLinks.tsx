@@ -37,7 +37,7 @@ const NavbarLinks = ({
                     height={"50px"}
                 />
             </Link>
-            <Link sx={navbarLinksStyle}>Öffnungszeiten</Link>
+            <Link sx={navbarLinksStyle} onClick={() => handleLinkClick("/working-times")}>Öffnungszeiten</Link>
             <Link sx={navbarLinksStyle} onClick={() => handleLinkClick("/latest")}>Aktuelles</Link>
             <Link sx={navbarLinksStyle} onClick={() => handleLinkClick("/center-info")}>Centerinfo</Link>
             <Link sx={navbarLinksStyle} onClick={() => handleLinkClick("/travel-and-parking")}>Anreise & Parking</Link>

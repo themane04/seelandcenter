@@ -1,0 +1,81 @@
+{
+    "general": [
+        {
+            "days": "Montag bis Donnerstag",
+            "hours": "09.00 - 19.00 Uhr"
+        },
+        {
+            "days": "Freitag",
+            "hours": "09.00 - 19.00 Uhr"
+        },
+        {
+            "days": "Samstag",
+            "hours": "09.00 - 17.00 Uhr"
+        }
+    ],
+    "additional_info": "Denner öffnet jeweils eine Stunde früher und schließt am Freitag um 20.00 Uhr",
+    "stores": {
+        "Denner": [
+            {
+                "days": "Montag bis Freitag",
+                "hours": "08.00 - 19.00 Uhr"
+            },
+            {
+                "days": "Freitag",
+                "hours": "08.00 - 20.00 Uhr"
+            }
+        ]
+    },
+    "holidays": {
+        "2024": {
+            "November": [
+                {
+                    "date": "Sonntag, 24. November",
+                    "event": "Sonntagsverkauf",
+                    "hours": "10 bis 17 Uhr"
+                }
+            ],
+            "Dezember": [
+                {
+                    "date": "Sonntag, 22. Dezember",
+                    "event": "Sonntagsverkauf",
+                    "hours": "10 bis 17 Uhr"
+                },
+                {
+                    "date": "Dienstag, 24. Dezember",
+                    "event": "Heiligabend",
+                    "hours": "9 bis 17 Uhr",
+                    "store_hours": "Denner: 8 bis 17 Uhr"
+                },
+                {
+                    "date": "Mittwoch, 25. Dezember",
+                    "event": "Weihnachten",
+                    "hours": "geschlossen"
+                },
+                {
+                    "date": "Donnerstag, 26. Dezember",
+                    "event": "Stephanstag",
+                    "hours": "geschlossen"
+                },
+                {
+                    "date": "Dienstag, 31. Dezember",
+                    "event": "Silvester",
+                    "hours": "9 bis 17 Uhr",
+                    "store_hours": "Denner: 8 bis 17 Uhr"
+                }
+            ],
+            "Januar 2025": [
+                {
+                    "date": "Mittwoch, 1. Januar",
+                    "event": "Neujahr",
+                    "hours": "geschlossen"
+                },
+                {
+                    "date": "Donnerstag, 2. Januar",
+                    "event": "Berchtoldstag",
+                    "hours": "geschlossen"
+                }
+            ]
+        }
+    }
+}

@@ -8,6 +8,7 @@ import RentalSpace from "../pages/RentalSpace.tsx";
 import TravelAndParking from "../pages/TravelAndParking.tsx";
 import CenterInfo from "../pages/CenterInfo.tsx";
 import Latest from "../pages/Latest.tsx";
+import WorkingTimes from "../pages/WorkingTimes.tsx";
 
 export const useRouteService = () => {
     const routes: IRoutes[] = [
@@ -55,6 +56,11 @@ export const useRouteService = () => {
             path: "/latest",
             name: "Latest",
             element: Latest
+        },
+        {
+            path: "/working-times",
+            name: "Working Times",
+            element: WorkingTimes
         }
     ]
 

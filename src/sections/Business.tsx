@@ -25,24 +25,24 @@ const Business = () => {
                     filter="blur(5px)"
                     opacity={0.9}
                     width="100vw"
-                    height="100vh"
-                    maxH={"600px"}
+                    height="600px"
                     position="absolute"
                     zIndex={0}
-                    top="15vw"
+                    top="250px"
                     left="0"
                 />
                 <Box zIndex={2}>
-                    <Text
-                        textTransform={"uppercase"}
-                        mb={"100px"}
-                        width={"100%"}
-                        textAlign={"center"}
-                        ml={"-9vw"}
-                        className={"section-section-distance"}
-                    >
-                        Geschäfte
-                    </Text>
+                    <Box position={"relative"}>
+                        <Text
+                            textTransform={"uppercase"}
+                            textAlign={"left"}
+                            width={"fit-content"}
+                            ml={"35vw"}
+                            className={"section-section-distance"}
+                        >
+                            Geschäfte
+                        </Text>
+                    </Box>
                     <BusinessCard/>
                 </Box>
             </VStack>

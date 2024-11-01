@@ -15,7 +15,7 @@ const Latest = () => {
                         mt={20}
                     >
                         <MdOutlineRemoveShoppingCart fontSize={"4rem"}/>
-                        <Text>
+                        <Text textAlign={"center"}>
                             Zur Zeit gibt es keine aktuellen Aktionen.
                         </Text>
                     </HStack>

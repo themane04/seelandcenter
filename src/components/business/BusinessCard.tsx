@@ -45,6 +45,7 @@ const BusinessCard = () => {
                 justifyContent="center"
                 alignItems="center"
                 spacing="0"
+                mt={"80px"}
             >
                 <ArrowButton
                     onClick={scrollLeft}

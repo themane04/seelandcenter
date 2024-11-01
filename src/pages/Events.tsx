@@ -15,7 +15,7 @@ const Events = () => {
                         mt={20}
                     >
                         <MdOutlineEventBusy fontSize={"4rem"}/>
-                        <Text>
+                        <Text textAlign={"center"}>
                             Zur Zeit sind keine Events geplant.
                         </Text>
                     </HStack>

@@ -38,6 +38,7 @@ const NavbarLinks = ({
                 />
             </Link>
             <Link sx={navbarLinksStyle} onClick={() => handleLinkClick("/working-times")}>Öffnungszeiten</Link>
+            <Link sx={navbarLinksStyle} onClick={() => handleLinkClick("/businesses")}>Geschäfte</Link>
             <Link sx={navbarLinksStyle} onClick={() => handleLinkClick("/latest")}>Aktuelles</Link>
             <Link sx={navbarLinksStyle} onClick={() => handleLinkClick("/center-info")}>Centerinfo</Link>
             <Link sx={navbarLinksStyle} onClick={() => handleLinkClick("/travel-and-parking")}>Anreise & Parking</Link>

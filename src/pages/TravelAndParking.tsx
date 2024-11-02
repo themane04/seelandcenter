@@ -1,4 +1,4 @@
-import BoxLayout from "../components/common/BoxLayout.tsx";
+import PageLayout from "../components/common/PageLayout.tsx";
 import {Heading, HStack, useMediaQuery, VStack} from "@chakra-ui/react";
 import {gradientTitle} from "../style/ts/Common.style.ts";
 import TravelInfoAndMap from "../components/travel_and_parking/TravelInfoAndMap.tsx";
@@ -9,7 +9,7 @@ const TravelAndParking = () => {
 
     return (
         <>
-            <BoxLayout>
+            <PageLayout>
                 <VStack>
                     <Heading sx={gradientTitle(is650px)}>Anreise & Parking</Heading>
                     {is900px ? (
@@ -35,7 +35,7 @@ const TravelAndParking = () => {
                         </HStack>
                     )}
                 </VStack>
-            </BoxLayout>
+            </PageLayout>
         </>
     );
 }

@@ -1,4 +1,4 @@
-import BoxLayout from "../components/common/BoxLayout.tsx";
+import PageLayout from "../components/common/PageLayout.tsx";
 import {Heading, HStack, useMediaQuery, VStack} from "@chakra-ui/react";
 import {gradientTitle} from "../style/ts/Common.style.ts";
 import {useEffect, useState} from "react";
@@ -25,7 +25,7 @@ const CenterInfo = () => {
 
     return (
         <>
-            <BoxLayout>
+            <PageLayout>
                 <VStack>
                     <Heading sx={gradientTitle(is650px)}>Infos zum Seeland Center</Heading>
                     {is1073px ? (
@@ -62,7 +62,7 @@ const CenterInfo = () => {
                         </HStack>
                     )}
                 </VStack>
-            </BoxLayout>
+            </PageLayout>
         </>
     );
 }

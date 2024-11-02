@@ -9,6 +9,7 @@ import TravelAndParking from "../pages/TravelAndParking.tsx";
 import CenterInfo from "../pages/CenterInfo.tsx";
 import Latest from "../pages/Latest.tsx";
 import WorkingTimes from "../pages/WorkingTimes.tsx";
+import Business from "../pages/Business.tsx";
 
 export const useRouteService = () => {
     const routes: IRoutes[] = [
@@ -16,6 +17,46 @@ export const useRouteService = () => {
             path: "/",
             name: "Home",
             element: Home
+        },
+        {
+            path: "/working-times",
+            name: "Working Times",
+            element: WorkingTimes
+        },
+        {
+            path: "/latest",
+            name: "Latest",
+            element: Latest
+        },
+        {
+            path: "/center-info",
+            name: "Center Info",
+            element: CenterInfo
+        },
+        {
+            path: "/travel-and-parking",
+            name: "Travel and Parking",
+            element: TravelAndParking
+        },
+        {
+            path: "/rental-spaces",
+            name: "Rental Space",
+            element: RentalSpace
+        },
+        {
+            path: "/events",
+            name: "Events",
+            element: Events
+        },
+        {
+            path: "/businesses",
+            name: "Businesses",
+            element: Business
+        },
+        {
+            path: "/business/:businessUrl",
+            name: "Business Detail",
+            element: BusinessDetail
         },
         {
             path: "/imprint",
@@ -26,41 +67,6 @@ export const useRouteService = () => {
             path: "/privacy-policy",
             name: "Privacy Policy",
             element: PrivacyPolicy
-        },
-        {
-            path: "/business/:businessUrl",
-            name: "Business",
-            element: BusinessDetail
-        },
-        {
-            path: "/events",
-            name: "Events",
-            element: Events
-        },
-        {
-            path: "/rental-spaces",
-            name: "Rental Space",
-            element: RentalSpace
-        },
-        {
-            path: "/travel-and-parking",
-            name: "Travel and Parking",
-            element: TravelAndParking
-        },
-        {
-            path: "/center-info",
-            name: "Center Info",
-            element: CenterInfo
-        },
-        {
-            path: "/latest",
-            name: "Latest",
-            element: Latest
-        },
-        {
-            path: "/working-times",
-            name: "Working Times",
-            element: WorkingTimes
         }
     ]
 

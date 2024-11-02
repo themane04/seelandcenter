@@ -1,7 +1,7 @@
 import {Box} from "@chakra-ui/react";
 import React, {ReactNode} from "react";
 
-const BoxLayout: React.FC<{ children: ReactNode }> = ({children}) => {
+const PageLayout: React.FC<{ children: ReactNode }> = ({children}) => {
     return (
         <>
             <Box
@@ -16,4 +16,4 @@ const BoxLayout: React.FC<{ children: ReactNode }> = ({children}) => {
     );
 }
 
-export default BoxLayout;
+export default PageLayout;

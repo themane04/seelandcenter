@@ -4,7 +4,7 @@ import {
     useMediaQuery, HStack, VStack
 } from '@chakra-ui/react';
 import {gradientTitle} from "../style/ts/Common.style.ts";
-import BoxLayout from "../components/common/BoxLayout.tsx";
+import PageLayout from "../components/common/PageLayout.tsx";
 import workingHoursData from ".././assets/working_times/times.json";
 import {IWorkingHours} from "../interfaces/time.interface.ts";
 import AccordionBox from "../components/working_times/AccordionBox.tsx";
@@ -18,7 +18,7 @@ const WorkingTimes = () => {
 
     return (
         <>
-            <BoxLayout>
+            <PageLayout>
                 <Heading sx={gradientTitle(is650px)}>Öffnungszeiten</Heading>
                 {is520px ? (
                     <>
@@ -53,7 +53,7 @@ const WorkingTimes = () => {
                         </HStack>
                     </>
                 )}
-            </BoxLayout>
+            </PageLayout>
         </>
     );
 };

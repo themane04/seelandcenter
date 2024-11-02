@@ -1,13 +1,13 @@
 import {Heading, HStack, Text, useMediaQuery, VStack} from "@chakra-ui/react";
 import {gradientTitle} from "../style/ts/Common.style.ts";
 import {MdOutlineEventBusy} from "react-icons/md";
-import BoxLayout from "../components/common/BoxLayout.tsx";
+import PageLayout from "../components/common/PageLayout.tsx";
 
 const Events = () => {
     const [is650px] = useMediaQuery("(max-width: 650px)");
     return (
         <>
-            <BoxLayout>
+            <PageLayout>
                 <VStack>
                     <Heading sx={gradientTitle(is650px)}>Events</Heading>
                     <HStack
@@ -20,7 +20,7 @@ const Events = () => {
                         </Text>
                     </HStack>
                 </VStack>
-            </BoxLayout>
+            </PageLayout>
         </>
     );
 }

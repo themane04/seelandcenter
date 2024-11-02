@@ -32,7 +32,7 @@ const Navbar = () => {
                 <BurgerMenu isOpen={isOpen} onClose={() => setIsOpen(false)}/>
             }
             <HStack
-                maxWidth={isOpen ? "100vw" : is880px ? "70px" : "600px"}
+                maxWidth={isOpen ? "100vw" : is880px ? "70px" : "700px"}
                 transform={isOpen ? "translateX(0)" : isNavbarVisible ? "translateY(0)" : "translateY(-200%)"}
                 transition="transform 0.4s ease-in-out, max-width 0.4s ease"
                 position="fixed"

@@ -1,14 +1,14 @@
 import {Heading, HStack, Text, useMediaQuery, VStack} from "@chakra-ui/react";
 import {gradientTitle} from "../style/ts/Common.style.ts";
 import RentalSpaceImages from "../components/rental_space/RentalSpaceImages.tsx";
-import BoxLayout from "../components/common/BoxLayout.tsx";
+import PageLayout from "../components/common/PageLayout.tsx";
 
 const RentalSpace = () => {
     const [is1200px] = useMediaQuery("(max-width: 1200px)");
     const [is650px] = useMediaQuery("(max-width: 650px)");
     return (
         <>
-            <BoxLayout>
+            <PageLayout>
                 <VStack>
                     <Heading sx={gradientTitle(is650px)}>Freiemietflächen</Heading>
                     <Text
@@ -39,7 +39,7 @@ const RentalSpace = () => {
                         </HStack>
                     )}
                 </VStack>
-            </BoxLayout>
+            </PageLayout>
         </>
     );
 }

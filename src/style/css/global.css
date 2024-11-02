@@ -20,7 +20,7 @@ html, body {
 }
 
 .navbar-section-distsance {
-    margin-top: 140px !important;
+    margin-top: 200px !important;
 }
 
 .section-section-distance {
@@ -29,4 +29,10 @@ html, body {
 
 .footer-section-distance {
     margin-bottom: 150px !important;
+}
+
+@media (max-width: 880px) {
+    .navbar-section-distsance {
+        margin-top: 110px !important;
+    }
 }

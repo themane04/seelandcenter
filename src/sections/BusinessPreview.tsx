@@ -1,7 +1,7 @@
 import {Box, Text, VStack} from "@chakra-ui/react";
 import BusinessCard from "../components/business/BusinessCard.tsx";
 
-const Business = () => {
+const BusinessPreview = () => {
     return (
         <>
             <section id="business"/>
@@ -50,4 +50,4 @@ const Business = () => {
     );
 }
 
-export default Business;
+export default BusinessPreview;

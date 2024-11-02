@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 import imageData from "../assets/home/images.json";
 import {imageBoxStyle} from "../style/ts/Home.style.ts";
 import SocialMediaBanner from "../components/home/SocialMediaBanner.tsx";
-import Business from "../sections/Business.tsx";
+import BusinessPreview from "../sections/BusinessPreview.tsx";
 import {environments} from "../services/environments.ts";
 
 const Home = () => {
@@ -41,7 +41,7 @@ const Home = () => {
                     handleDotClick={handleDotClick}
                 />
             </Box>
-            <Business/>
+            <BusinessPreview/>
         </>
     );
 };

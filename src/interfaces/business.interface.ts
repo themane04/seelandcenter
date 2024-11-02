@@ -42,4 +42,6 @@ export interface IBusinessDetailContent {
     website_text?: string;
 }
 
-
+export interface IBusinessCard {
+    isBusinessPage?: boolean;
+}

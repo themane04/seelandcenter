@@ -17,12 +17,16 @@
     "stores": {
         "Denner": [
             {
-                "days": "Montag bis Freitag",
+                "days": "Montag bis Donnerstag",
                 "hours": "08.00 - 19.00 Uhr"
             },
             {
                 "days": "Freitag",
                 "hours": "08.00 - 20.00 Uhr"
+            },
+            {
+                "days": "Samstag",
+                "hours": "08.00 - 17.00 Uhr"
             }
         ]
     },
@@ -32,19 +36,19 @@
                 {
                     "date": "Sonntag, 24. November",
                     "event": "Sonntagsverkauf",
-                    "hours": "10 bis 17 Uhr"
+                    "hours": "10.00 bis 17.00 Uhr"
                 }
             ],
             "Dezember": [
                 {
                     "date": "Sonntag, 22. Dezember",
                     "event": "Sonntagsverkauf",
-                    "hours": "10 bis 17 Uhr"
+                    "hours": "10.00 bis 17.00 Uhr"
                 },
                 {
                     "date": "Dienstag, 24. Dezember",
                     "event": "Heiligabend",
-                    "hours": "9 bis 17 Uhr",
+                    "hours": "9.00 bis 17.00 Uhr",
                     "store_hours": "Denner: 8 bis 17 Uhr"
                 },
                 {
@@ -60,8 +64,8 @@
                 {
                     "date": "Dienstag, 31. Dezember",
                     "event": "Silvester",
-                    "hours": "9 bis 17 Uhr",
-                    "store_hours": "Denner: 8 bis 17 Uhr"
+                    "hours": "9.00 bis 17.00 Uhr",
+                    "store_hours": "Denner: 8.00 bis 17.00 Uhr"
                 }
             ],
             "Januar 2025": [

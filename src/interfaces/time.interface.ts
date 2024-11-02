@@ -41,5 +41,4 @@ export interface IWorkingHoursData {
 export interface AccordionBoxProps {
     title: string;
     data: Record<string, IWorkingHoursData[]>;
-    allowMultiple?: boolean;
 }

@@ -47,8 +47,12 @@ const BusinessCardContent = ({business}: IBusinessCardContent) => {
                     justifyContent="space-between"
                 >
                     <VStack alignItems="flex-start">
-                        <Text fontSize="0.875rem" fontWeight="bold" textTransform="uppercase"
-                              color="#FFFFFF">
+                        <Text
+                            fontSize="0.875rem"
+                            fontWeight="bold"
+                            textTransform="uppercase"
+                            color="#FFFFFF"
+                        >
                             {business.name}
                         </Text>
                         <Text fontSize="0.688rem" color="#32BCF1">
@@ -56,7 +60,12 @@ const BusinessCardContent = ({business}: IBusinessCardContent) => {
                         </Text>
                     </VStack>
                     <Box position="absolute" right="5" bottom="4" p="2">
-                        <Image src="/business/icons/arrow.svg" alt="arrow" width="26px" height="26px"/>
+                        <Image
+                            src="/business/icons/arrow.svg"
+                            alt="arrow"
+                            width="26px"
+                            height="26px"
+                        />
                     </Box>
                 </HStack>
             </Box>

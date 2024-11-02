@@ -51,6 +51,7 @@ const Business = () => {
                             wrap="wrap"
                             mt="60px"
                             mb="60px"
+                            letterSpacing={"0.2rem"}
                         >
                             {filteredBusinesses.map((business) => (
                                 <BusinessCardContent key={business.id} business={business}/>

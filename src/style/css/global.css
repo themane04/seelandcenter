@@ -30,9 +30,3 @@ html, body {
 .footer-section-distance {
     margin-bottom: 150px !important;
 }
-
-@media (max-width: 880px) {
-    .navbar-section-distsance {
-        margin-top: 110px !important;
-    }
-}

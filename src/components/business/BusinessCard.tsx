@@ -1,13 +1,10 @@
-import {Box, Flex, HStack, useMediaQuery} from "@chakra-ui/react";
+import {Box, HStack, useMediaQuery} from "@chakra-ui/react";
 import businessData from "../.././assets/business/businesses.json";
 import {useEffect, useRef, useState} from "react";
 import BusinessCardContent from "./BusinessCardContent.tsx";
 import ArrowButton from "../common/ArrowButton.tsx";
-import {IBusinessCard} from "../../interfaces/business.interface.ts";
 
-const BusinessCard = ({
-                          isBusinessPage
-                      }: IBusinessCard) => {
+const BusinessCard = () => {
     const scrollRef = useRef<HTMLDivElement>(null);
     const [isScrolledLeft, setIsScrolledLeft] = useState(true);
     const [isScrolledRight, setIsScrolledRight] = useState(false);
@@ -43,64 +40,44 @@ const BusinessCard = ({
     return (
         <>
             <HStack
-                width={isBusinessPage ? "100%" : "100vw"}
+                width="100vw"
                 overflowX="hidden"
                 justifyContent="center"
                 alignItems="center"
                 spacing="0"
-                mt={isBusinessPage ? "0" : "50px"}
+                mt={"80px"}
             >
-                {!isBusinessPage && (
-                    <ArrowButton
-                        onClick={scrollLeft}
-                        hideLeft={isScrolledLeft}
-                        iconSize={"70px"}
-                        motionMt={"65%"}
-                    />
-                )}
-                {isBusinessPage ? (
-                    <Flex
-                        ref={scrollRef}
-                        gap="30px"
-                        alignItems="center"
-                        justifyContent="center"
-                        wrap={"wrap"}
-                        mt={"60px"}
-                        mb={"60px"}
-                    >
-                        {businessData.map((business) => (
-                            <BusinessCardContent key={business.id} business={business}/>
-                        ))}
-                    </Flex>
-                ) : (
-                    <Box
-                        ref={scrollRef}
-                        minWidth="100vw"
-                        display="flex"
-                        overflowX="auto"
-                        scrollSnapType="x mandatory"
-                        scrollBehavior="smooth"
-                        gap="80px"
-                        height="500px"
-                        alignItems="center"
-                        paddingLeft={"35vw"}
-                        paddingRight={"35vw"}
-                    >
-                        {businessData.map((business) => (
-                            <BusinessCardContent key={business.id} business={business}/>
-                        ))}
-                    </Box>
-                )}
-                {!isBusinessPage && (
-                    <ArrowButton
-                        onClick={scrollRight}
-                        isRight={true}
-                        hideRight={isScrolledRight}
-                        iconSize={"70px"}
-                        motionMt={"65%"}
-                        left={is705px ? "75%" : "90%"}
-                    />
-                )}
+                <ArrowButton
+                    onClick={scrollLeft}
+                    hideLeft={isScrolledLeft}
+                    iconSize={"70px"}
+                    motionMt={"65%"}
+                />
+                <Box
+                    ref={scrollRef}
+                    minWidth="100vw"
+                    display="flex"
+                    overflowX="auto"
+                    scrollSnapType="x mandatory"
+                    scrollBehavior="smooth"
+                    gap="80px"
+                    height="500px"
+                    alignItems="center"
+                    paddingLeft="35vw"
+                    paddingRight="35vw"
+                >
+                    {businessData.map((business) => (
+                        <BusinessCardContent key={business.id} business={business}/>
+                    ))}
+                </Box>
+                <ArrowButton
+                    onClick={scrollRight}
+                    isRight={true}
+                    hideRight={isScrolledRight}
+                    iconSize={"70px"}
+                    motionMt={"65%"}
+                    left={is705px ? "75%" : "90%"}
+                />
             </HStack>
         </>
     )

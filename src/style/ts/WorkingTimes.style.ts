@@ -19,5 +19,4 @@ export const outsideAccordionBox = (is520px: boolean, isBusinessPage?: boolean) 
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
-    width: "80%"
 })

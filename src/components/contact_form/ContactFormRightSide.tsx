@@ -1,7 +1,9 @@
-import {Box, Button, Input, InputGroup, Text, Textarea, useMediaQuery, VStack} from "@chakra-ui/react";
+import {Box, Button, Input, InputGroup, Textarea, useMediaQuery, useToast, VStack} from "@chakra-ui/react";
 import {inputField} from "../../style/ts/ContactForm.style.ts";
-import React, {useState} from "react";
-import {validateEmail, validateName} from "../../utils/form.validation.util.ts";
+import React, {useRef, useState} from "react";
+import {capitalizeFirstLetter, validateEmail, validateName} from "../../utils/form.validation.util.ts";
+import {showErrorToast} from "../../utils/toast.util.ts";
+import {environments} from "../../services/environments.ts";
 
 const ContactFormRightSide = () => {
     const [name, setName] = useState("");
@@ -10,18 +12,35 @@ const ContactFormRightSide = () => {
     const [nameValid, setNameValid] = useState(true);
     const [emailValid, setEmailValid] = useState(true);
     const [is580px] = useMediaQuery("(max-width: 580px)");
+    const toast = useToast();
+    const lastNameToastTimeRef = useRef(0);
+    const lastEmailToastTimeRef = useRef(0);
 
     const handleNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        const value = event.target.value;
+        const value = capitalizeFirstLetter(event.target.value);
         setName(value);
-        setNameValid(validateName(value));
-    }
+        const isValid = validateName(value);
+        setNameValid(isValid);
+
+        const currentTime = Date.now();
+        if (!isValid && currentTime - lastNameToastTimeRef.current > environments.toastMessageCooldown) {
+            showErrorToast(toast, "Der gegebene Name ist ungültig.");
+            lastNameToastTimeRef.current = currentTime;
+        }
+    };
 
     const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         const value = event.target.value;
         setEmail(value);
-        setEmailValid(validateEmail(value));
-    }
+        const isValid = validateEmail(value);
+        setEmailValid(isValid);
+
+        const currentTime = Date.now();
+        if (!isValid && currentTime - lastEmailToastTimeRef.current > environments.toastMessageCooldown) {
+            showErrorToast(toast, "Die gegebene E-Mail ist ungültig.");
+            lastEmailToastTimeRef.current = currentTime;
+        }
+    };
 
     return (
         <>
@@ -30,7 +49,7 @@ const ContactFormRightSide = () => {
                 color="#FFFFFF"
                 alignItems="flex-start"
                 mt="50px"
-                spacing={4}
+                spacing={10}
             >
                 <InputGroup>
                     <Input
@@ -43,14 +62,6 @@ const ContactFormRightSide = () => {
                         errorBorderColor="red.500"
                     />
                 </InputGroup>
-                <Box height="20px">
-                    {!nameValid && (
-                        <Text color="red.500" fontSize="sm">
-                            Bitte geben Sie einen gültigen Namen ein.
-                        </Text>
-                    )}
-                </Box>
-
                 <InputGroup>
                     <Input
                         placeholder="E-Mail"
@@ -62,14 +73,6 @@ const ContactFormRightSide = () => {
                         errorBorderColor="red.500"
                     />
                 </InputGroup>
-                <Box height="20px">
-                    {!emailValid && (
-                        <Text color="red.500" fontSize="sm">
-                            Bitte geben Sie eine gültige E-Mail-Adresse ein.
-                        </Text>
-                    )}
-                </Box>
-
                 <InputGroup>
                     <Textarea
                         placeholder="Ihre Nachricht"
@@ -80,7 +83,6 @@ const ContactFormRightSide = () => {
                         onChange={(e) => setMessage(e.target.value)}
                     />
                 </InputGroup>
-
                 <Box
                     width="100%"
                     display="flex"

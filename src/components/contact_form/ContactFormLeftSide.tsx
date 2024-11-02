@@ -8,7 +8,7 @@ const ContactFormLeftSide = () => {
             <Box
                 textTransform={"uppercase"}
                 fontSize={is580px ? "10vw" : "4.688rem"}
-                textAlign={is1100px ? "center" : "left"}
+                textAlign={is1100px ? "center" : "right"}
                 color={"#9E9E9E"}
                 mt={"-50px"}
             >

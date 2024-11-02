@@ -8,7 +8,7 @@ const Events = () => {
     return (
         <>
             <PageLayout>
-                <VStack>
+                <VStack p={is650px ? "6vw" : ""}>
                     <Heading sx={gradientTitle(is650px)}>Events</Heading>
                     <HStack
                         spacing={"5px"}

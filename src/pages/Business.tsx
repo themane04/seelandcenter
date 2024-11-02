@@ -1,8 +1,7 @@
 import PageLayout from "../components/common/PageLayout.tsx";
 import {Box, Flex, Heading, Text, useMediaQuery, VStack} from "@chakra-ui/react";
-import {gradientTitle} from "../style/ts/Common.style.ts";
+import {gradientTitle, outsideAccordionBox} from "../style/ts/Common.style.ts";
 import businessData from "../assets/business/businesses.json";
-import {outsideAccordionBox} from "../style/ts/WorkingTimes.style.ts";
 import {useState} from "react";
 import BusinessCardContent from "../components/business/BusinessCardContent.tsx";
 

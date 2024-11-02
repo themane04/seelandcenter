@@ -3,13 +3,12 @@ import {
     Heading,
     useMediaQuery, HStack, VStack
 } from '@chakra-ui/react';
-import {gradientTitle} from "../style/ts/Common.style.ts";
+import {gradientTitle, outsideAccordionBox} from "../style/ts/Common.style.ts";
 import PageLayout from "../components/common/PageLayout.tsx";
 import workingHoursData from ".././assets/working_times/times.json";
 import {IWorkingHours} from "../interfaces/time.interface.ts";
 import AccordionBox from "../components/working_times/AccordionBox.tsx";
 import LeftSideInfo from "../components/working_times/LeftSideInfo.tsx";
-import {outsideAccordionBox} from "../style/ts/WorkingTimes.style.ts";
 
 const WorkingTimes = () => {
     const [is650px] = useMediaQuery("(max-width: 650px)");

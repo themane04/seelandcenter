@@ -14,3 +14,14 @@ export const underTitle = {
     mt: 5,
     textTransform: "uppercase",
 };
+
+export const outsideAccordionBox = (is520px: boolean, isBusinessPage?: boolean) => ({
+    borderLeft: is520px || isBusinessPage ? "none" : "2px solid rgba(50, 188, 241, 0.5)",
+    borderTop: is520px || isBusinessPage ? "2px solid rgba(50, 188, 241, 0.5)" : "none",
+    pl: is520px || isBusinessPage ? 0 : 10,
+    ml: is520px || isBusinessPage ? 0 : 10,
+    mt: is520px && !isBusinessPage ? 10 : 0,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+})

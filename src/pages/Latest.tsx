@@ -8,7 +8,7 @@ const Latest = () => {
     return (
         <>
             <PageLayout>
-                <VStack>
+                <VStack p={is650px ? "6vw" : ""}>
                     <Heading sx={gradientTitle(is650px)}>Aktuelle Aktionen</Heading>
                     <HStack
                         spacing={"5px"}

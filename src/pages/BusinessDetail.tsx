@@ -1,4 +1,4 @@
-import {Text, HStack, useMediaQuery, VStack} from "@chakra-ui/react";
+import {Text, HStack, useMediaQuery, Box} from "@chakra-ui/react";
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import businessData from "../assets/business/businesses.json";
@@ -28,6 +28,7 @@ const BusinessDetail = () => {
         <>
             <HStack
                 w={"90%"}
+                maxW={"2000px"}
                 h={"fit-content"}
                 m={"0 auto"}
                 top={"20vh"}
@@ -37,7 +38,7 @@ const BusinessDetail = () => {
             >
                 {is880px ? (
                     <>
-                        <VStack gap={"50px"}>
+                        <Box>
                             <BusinessDetailContent
                                 name={business.name}
                                 under_title={business.under_title}
@@ -53,7 +54,7 @@ const BusinessDetail = () => {
                                 currentImage={currentImage}
                                 setCurrentImage={setCurrentImage}
                             />
-                        </VStack>
+                        </Box>
                     </>
                 ) : (
                     <>

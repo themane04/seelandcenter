@@ -40,6 +40,7 @@ self.addEventListener('install', (event) => {
                 '/logo/centerio_t.png',
                 '/logo/logo.png',
                 '/logo/logo_t.png',
+                '/logo/logo_t_blue.png',
                 '/mall/entrance.png',
                 '/mall/inside.png',
                 '/mall/inside_denner.png',

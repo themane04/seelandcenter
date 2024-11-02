@@ -7,6 +7,7 @@ const BusinessDetailImage = ({
                                  setCurrentImage
                              }: IBusinessDetailImage) => {
     const [is550px] = useMediaQuery("(max-width: 550px)");
+    const [is880px] = useMediaQuery("(max-width: 880px)");
     return (
         <>
             <Box
@@ -17,13 +18,32 @@ const BusinessDetailImage = ({
                 overflow="hidden"
                 maxW="900px"
                 minW={is550px ? "100%" : "500px"}
+                height={"500px"}
+                mt={is880px ? "10" : "0"}
             >
-                <Image
-                    src={business.images[currentImage]}
-                    alt={`${business.name} - Image ${currentImage + 1}`}
-                    objectFit="cover"
+                <Box
+                    position="relative"
                     width="100%"
-                />
+                    height="100%"
+                >
+                    {business.images.map((image, index) => (
+                        <Image
+                            key={index}
+                            src={image}
+                            alt={`${business.name} - Image ${index + 1}`}
+                            objectFit="cover"
+                            width="100%"
+                            height="100%"
+                            style={{
+                                position: 'absolute',
+                                top: 0,
+                                left: 0,
+                                opacity: index === currentImage ? 1 : 0,
+                                transition: 'opacity 1s ease-in-out'
+                            }}
+                        />
+                    ))}
+                </Box>
                 <Flex
                     position="absolute"
                     bottom="0"
@@ -34,27 +54,25 @@ const BusinessDetailImage = ({
                     display={business.images.length > 1 ? "flex" : "none"}
                 >
                     {business.images.map((_, index) => (
-                        <>
-                            <Button
-                                key={index}
-                                onClick={() => setCurrentImage(index)}
-                                variant={"ghost"}
-                                _hover={{bg: "none", transform: "scale(1.1)"}}
-                                width={"fit-content"}
-                                height={"fit-content"}
-                                padding="10px"
-                                zIndex="4"
-                            >
-                                <Image
-                                    src={index === currentImage
-                                        ? "/home/dot_clicked.svg"
-                                        : "/home/dot_unclicked.svg"
-                                    }
-                                    width="10px"
-                                    height="10px"
-                                />
-                            </Button>
-                        </>
+                        <Button
+                            key={index}
+                            onClick={() => setCurrentImage(index)}
+                            variant={"ghost"}
+                            _hover={{bg: "none", transform: "scale(1.1)"}}
+                            width={"fit-content"}
+                            height={"fit-content"}
+                            padding="10px"
+                            zIndex="4"
+                        >
+                            <Image
+                                src={index === currentImage
+                                    ? "/home/dot_clicked.svg"
+                                    : "/home/dot_unclicked.svg"
+                                }
+                                width="10px"
+                                height="10px"
+                            />
+                        </Button>
                     ))}
                 </Flex>
             </Box>

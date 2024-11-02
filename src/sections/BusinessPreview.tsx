@@ -12,7 +12,6 @@ const BusinessPreview = () => {
                 fontWeight={"bold"}
                 lineHeight={"200%"}
                 position="relative"
-                className={"footer-section-distance"}
             >
                 <Box
                     backgroundImage={

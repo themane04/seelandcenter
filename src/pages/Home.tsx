@@ -5,6 +5,7 @@ import {imageBoxStyle} from "../style/ts/Home.style.ts";
 import SocialMediaBanner from "../components/home/SocialMediaBanner.tsx";
 import BusinessPreview from "../sections/BusinessPreview.tsx";
 import {environments} from "../services/environments.ts";
+import ContactForm from "../sections/ContactForm.tsx";
 
 const Home = () => {
     const [currentImageIndex, setCurrentImageIndex] = useState(4);
@@ -42,6 +43,7 @@ const Home = () => {
                 />
             </Box>
             <BusinessPreview/>
+            <ContactForm/>
         </>
     );
 };

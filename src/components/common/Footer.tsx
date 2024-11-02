@@ -2,9 +2,18 @@ import {Box, HStack, useMediaQuery, VStack} from "@chakra-ui/react";
 import SeelandLocation from "../footer/SeelandLocation.tsx";
 import SeelandSocialsAndNavigation from "../footer/SeelandSocialsAndNavigation.tsx";
 import CenterManagement from "../footer/CenterManagement.tsx";
+import {useEffect, useState} from "react";
+import {useLocation} from "react-router-dom";
 
 const Footer = () => {
+    const location = useLocation();
     const [is731px] = useMediaQuery("(max-width: 731px)");
+    const [isHomepage, setIsHomepage] = useState(false);
+
+    useEffect(() => {
+        setIsHomepage(location.pathname === "/");
+    }, [location.pathname]);
+
     return (
         <>
             <Box
@@ -14,7 +23,7 @@ const Footer = () => {
                 height={"fit-content"}
                 pt={"40px"}
                 pb={"40px"}
-                mt={"100px"}
+                mt={isHomepage ? "0" : "100px"}
                 textTransform={"uppercase"}
                 position={"relative"}
             >

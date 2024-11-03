@@ -11,11 +11,15 @@ const BusinessDetailContent = ({
                                    website,
                                    website_text
                                }: IBusinessDetailContent) => {
-    const [is980px] = useMediaQuery("(max-width: 9880px)");
+    const [is980px] = useMediaQuery("(max-width: 980px)");
     const [is450px] = useMediaQuery("(max-width: 450px)");
     return (
         <>
-            <Box flex="1" color={"#FFFFFF"} textAlign={is980px ? "center" : "left"}>
+            <Box
+                flex="1"
+                color={"#FFFFFF"}
+                textAlign={is980px ? "center" : "left"}
+            >
                 <Heading
                     as="h2"
                     fontSize={is450px ? "2rem" : "3rem"}

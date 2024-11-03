@@ -11,13 +11,14 @@ const BusinessDetailContent = ({
                                    website,
                                    website_text
                                }: IBusinessDetailContent) => {
-    const [is880px] = useMediaQuery("(max-width: 880px)");
+    const [is980px] = useMediaQuery("(max-width: 9880px)");
+    const [is450px] = useMediaQuery("(max-width: 450px)");
     return (
         <>
-            <Box flex="1" color={"#FFFFFF"} textAlign={is880px ? "center" : "left"}>
+            <Box flex="1" color={"#FFFFFF"} textAlign={is980px ? "center" : "left"}>
                 <Heading
                     as="h2"
-                    fontSize="3rem"
+                    fontSize={is450px ? "2rem" : "3rem"}
                     mb={4}
                     color={"rgba(50, 188, 241, 1)"}
                     textTransform={"uppercase"}
@@ -69,7 +70,7 @@ const BusinessDetailContent = ({
                     fontWeight="bold"
                     display={website ? "block" : "none"}
                     width={"fit-content"}
-                    margin={is880px ? "0 auto" : ""}
+                    margin={is980px ? "0 auto" : ""}
                     transition={"all 0.3s"}
                     _hover={{
                         textDecoration: "none",

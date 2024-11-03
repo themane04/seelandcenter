@@ -8,7 +8,7 @@ import BusinessDetailContent from "../components/business/BusinessDetailContent.
 
 const BusinessDetail = () => {
     const [currentImage, setCurrentImage] = useState(0);
-    const [is880px] = useMediaQuery("(max-width: 880px)");
+    const [is980px] = useMediaQuery("(max-width: 980px)");
     const {businessUrl} = useParams<{ businessUrl: string }>();
     const business = businessData.find(biz => biz.url === businessUrl?.toLowerCase());
 
@@ -29,14 +29,11 @@ const BusinessDetail = () => {
             <HStack
                 w={"90%"}
                 maxW={"2000px"}
-                h={"fit-content"}
                 m={"0 auto"}
-                top={"20vh"}
-                position={"relative"}
                 spacing={"2vw"}
-                mb={"30vh"}
+                className={"navbar-section-distsance"}
             >
-                {is880px ? (
+                {is980px ? (
                     <>
                         <Box>
                             <BusinessDetailContent

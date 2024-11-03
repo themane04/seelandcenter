@@ -7,7 +7,7 @@ const BusinessDetailImage = ({
                                  setCurrentImage
                              }: IBusinessDetailImage) => {
     const [is550px] = useMediaQuery("(max-width: 550px)");
-    const [is880px] = useMediaQuery("(max-width: 880px)");
+    const [is980px] = useMediaQuery("(max-width: 980px)");
     return (
         <>
             <Box
@@ -19,7 +19,7 @@ const BusinessDetailImage = ({
                 maxW="900px"
                 minW={is550px ? "100%" : "500px"}
                 height={"500px"}
-                mt={is880px ? "10" : "0"}
+                mt={is980px ? "10" : "0"}
             >
                 <Box
                     position="relative"

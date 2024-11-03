@@ -1,6 +1,6 @@
 export const imageBoxStyle = (imageUrl: string) => ({
     backgroundImage: imageUrl
-        ? `linear-gradient(0deg, #141414 6%, rgba(20, 20, 20, 0.15) 50%), url(${imageUrl})`
+        ? `linear-gradient(0deg, #141414 4%, rgba(20, 20, 20, 0.15) 50%), url(${imageUrl})`
         : "none",
     backgroundSize: 'cover',
     backgroundPosition: 'center',

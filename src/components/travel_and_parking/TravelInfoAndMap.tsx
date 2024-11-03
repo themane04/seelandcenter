@@ -1,7 +1,8 @@
 import {Box, Table, Tbody, Td, Text, Th, Thead, Tr, useMediaQuery} from "@chakra-ui/react";
 import {tableHeader} from "../../style/ts/TravelAndParking.style.ts";
 import locationData from "../../assets/travel_and_parking/location.json";
-import {underTitle} from "../../style/ts/Common.style.ts";
+import {secondaryInfo, underTitle} from "../../style/ts/Common.style.ts";
+import {environments} from "../../services/environments.ts";
 
 const TravelInfoAndMap = () => {
     const [is900px] = useMediaQuery("(max-width: 900px)");
@@ -32,7 +33,7 @@ const TravelInfoAndMap = () => {
                         ))}
                     </Tbody>
                 </Table>
-                <Text mt={5} w={"95%"}>{locationData.location_details.station_distance}</Text>
+                <Text sx={secondaryInfo}>{locationData.location_details.station_distance}</Text>
             </Box>
             <Box
                 width={is900px ? "90%" : "50%"}
@@ -46,8 +47,9 @@ const TravelInfoAndMap = () => {
                     height="450"
                     style={{border: 0, borderRadius: "10px"}}
                     referrerPolicy={"no-referrer-when-downgrade"}
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2717.223938287596!2d7.306127000000001!3d47.075072!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e180be402719d%3A0x860a9c42d76e61a0!2sSeeland%20Center!5e0!3m2!1sde!2sus!4v1730404342787!5m2!1sde!2sus"
+                    src={environments.googleLocation}
                     allowFullScreen={true}
+                    loading="lazy"
                 />
             </Box>
         </>

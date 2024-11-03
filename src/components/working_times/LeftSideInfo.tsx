@@ -1,5 +1,5 @@
 import {Box, Text, VStack} from "@chakra-ui/react";
-import {underTitle} from "../../style/ts/Common.style.ts";
+import {secondaryInfo, underTitle} from "../../style/ts/Common.style.ts";
 import {indexBox, itemDaysAndHours} from "../../style/ts/WorkingTimes.style.ts";
 import {IWorkingHours} from "../../interfaces/time.interface.ts";
 
@@ -16,7 +16,7 @@ export const LeftSideInfo = (workingHours: IWorkingHours) => {
                             </Text>
                         </Box>
                     ))}
-                    <Text color="white" opacity="0.6" fontSize="sm" mt="4" fontStyle="italic">
+                    <Text sx={secondaryInfo}>
                         {workingHours.additional_info}
                     </Text>
                 </VStack>

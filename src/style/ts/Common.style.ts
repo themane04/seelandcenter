@@ -24,4 +24,12 @@ export const outsideAccordionBox = (is520px: boolean, isBusinessPage?: boolean) 
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
-})
+});
+
+export const secondaryInfo = {
+    color: "white",
+    opacity: 0.6,
+    fontSize: "sm",
+    fontStyle: "italic",
+    mt: 4,
+}

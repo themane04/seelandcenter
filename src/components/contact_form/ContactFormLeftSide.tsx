@@ -10,7 +10,7 @@ const ContactFormLeftSide = () => {
                 fontSize={is580px ? "10vw" : "4.688rem"}
                 textAlign={is1100px ? "center" : "right"}
                 color={"#9E9E9E"}
-                mt={"-50px"}
+                mt={is1100px ? "20px" : "-50px"}
             >
                 <Text>Kontaktieren Sie</Text>
                 <Text>Uns</Text>

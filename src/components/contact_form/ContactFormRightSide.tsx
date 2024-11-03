@@ -1,9 +1,20 @@
-import {Box, Button, Input, InputGroup, Textarea, useMediaQuery, useToast, VStack} from "@chakra-ui/react";
-import {inputField} from "../../style/ts/ContactForm.style.ts";
+import {
+    Box,
+    Button,
+    Input,
+    InputGroup,
+    InputRightElement,
+    Textarea,
+    useMediaQuery,
+    useToast,
+    VStack
+} from "@chakra-ui/react";
+import {errorIcon, inputField} from "../../style/ts/ContactForm.style.ts";
 import React, {useRef, useState} from "react";
 import {capitalizeFirstLetter, validateEmail, validateName} from "../../utils/form.validation.util.ts";
-import {showErrorToast} from "../../utils/toast.util.ts";
+import {showErrorToast, showInfoToast, showSuccessToast} from "../../utils/toast.util.ts";
 import {environments} from "../../services/environments.ts";
+import {MdErrorOutline} from "react-icons/md";
 
 const ContactFormRightSide = () => {
     const [name, setName] = useState("");
@@ -12,6 +23,7 @@ const ContactFormRightSide = () => {
     const [nameValid, setNameValid] = useState(true);
     const [emailValid, setEmailValid] = useState(true);
     const [is580px] = useMediaQuery("(max-width: 580px)");
+    const [is1100px] = useMediaQuery("(max-width: 1100px)");
     const toast = useToast();
     const lastNameToastTimeRef = useRef(0);
     const lastEmailToastTimeRef = useRef(0);
@@ -42,42 +54,74 @@ const ContactFormRightSide = () => {
         }
     };
 
+    const handleSubmit = () => {
+        const currentTime = Date.now();
+        if (currentTime - lastNameToastTimeRef.current <= environments.toastMessageCooldown ||
+            currentTime - lastEmailToastTimeRef.current <= environments.toastMessageCooldown) {
+            showInfoToast(toast, "Bitte geben Sie gültige Daten ein.");
+            return;
+        }
+
+        if (!nameValid || !emailValid) {
+            showInfoToast(toast, "Bitte geben Sie gültige Daten ein.");
+            return;
+        }
+
+        if (name === "" || email === "" || message === "") {
+            showInfoToast(toast, "Bitte füllen Sie alle Felder aus.");
+            return;
+        }
+
+        showSuccessToast(toast, "Ihre Nachricht wurde erfolgreich versendet.");
+        setName("");
+        setEmail("");
+        setMessage("");
+    }
+
     return (
         <>
             <VStack
                 width={is580px ? "100%" : "500px"}
                 color="#FFFFFF"
                 alignItems="flex-start"
-                mt="50px"
+                mt={is1100px ? "0" : "100px"}
                 spacing={10}
             >
                 <InputGroup>
                     <Input
                         placeholder="Name"
                         variant="flushed"
-                        sx={inputField}
+                        sx={inputField(nameValid)}
                         value={name}
                         onChange={handleNameChange}
                         isInvalid={!nameValid}
-                        errorBorderColor="red.500"
                     />
+                    {!nameValid && (
+                        <InputRightElement>
+                            <MdErrorOutline style={errorIcon}/>
+                        </InputRightElement>
+                    )}
                 </InputGroup>
                 <InputGroup>
                     <Input
                         placeholder="E-Mail"
                         variant="flushed"
-                        sx={inputField}
+                        sx={inputField(emailValid)}
                         value={email}
                         onChange={handleEmailChange}
                         isInvalid={!emailValid}
-                        errorBorderColor="red.500"
                     />
+                    {!emailValid && (
+                        <InputRightElement>
+                            <MdErrorOutline style={errorIcon}/>
+                        </InputRightElement>
+                    )}
                 </InputGroup>
                 <InputGroup>
                     <Textarea
                         placeholder="Ihre Nachricht"
                         variant="flushed"
-                        sx={inputField}
+                        sx={inputField(true)}
                         resize="none"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
@@ -103,6 +147,7 @@ const ContactFormRightSide = () => {
                             transform: "scale(1.1)",
                             transition: "transform 0.5s ease"
                         }}
+                        onClick={handleSubmit}
                     >
                         Senden
                     </Button>

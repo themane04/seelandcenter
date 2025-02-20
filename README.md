@@ -1,50 +1,54 @@
-# React + TypeScript + Vite
+# Seelandcenter - React-Webseite mit Docker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 1. Installation
+Öffne das Terminal und führe folgende Befehle aus:
 
-Currently, two official plugins are available:
+```bash
+# Repository clonen
+git clone https://github.com/themane04/seelandcenter
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# In das Projektverzeichnis wechseln
+cd seelandcenter
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+# Docker-Compose starten
+docker-compose -f docker-compose.yml up -d
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## 📌 2. Anwendung aufrufen
+Öffne den Browser und gehe zu:
 ```
+http://localhost:8080
+```
+
+## 📌 3. Anwendung stoppen
+Falls du die Anwendung beenden möchtest, führe den folgenden Befehl aus:
+
+```bash
+# Container stoppen
+docker-compose down
+```
+
+## 📌 4. Test in "Play with Docker"
+Falls du das Projekt in Play with Docker testen möchtest:
+
+1. **Gehe zu** [Play with Docker](https://labs.play-with-docker.com/)
+2. **Erstelle eine neue Instanz**
+3. **Führe folgende Befehle aus:**
+
+```bash
+# Repository clonen
+git clone https://github.com/themane04/seelandcenter
+
+# In das Projektverzeichnis wechseln
+cd seelandcenter
+
+# Docker-Compose starten
+docker-compose -f docker-compose.yml up -d
+```
+
+4. **Öffne die Webseite unter:**
+```
+http://localhost:8080
+```
+
+🎉 Viel Spaß mit der Seelandcenter React-Webseite! 🚀

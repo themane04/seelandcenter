@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  react-app:
+    image: ghcr.io/themane04/seelandcenter:v1
+    container_name: seelandcenter
+    ports:
+      - "8080:80"
+    restart: unless-stopped
